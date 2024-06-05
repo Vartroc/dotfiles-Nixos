@@ -4,6 +4,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+#      ../../modules/nixos/nix-minecraft.nix
       inputs.home-manager.nixosModules.default
     ];
 
@@ -21,7 +22,7 @@
 			};
 		};
 	};
-
+networking.nameservers = [ "185.222.222.222" "45.11.45.11" ];
   networking.hostName = "Gartroc"; # Define your hostname.
   networking.hostId = "afcefed7";
   # Pick only one of the below networking options.
