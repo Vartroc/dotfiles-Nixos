@@ -1,10 +1,11 @@
 { config, inputs, lib, pkgs, ... }:
 
+
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-#      ../../modules/nixos/nix-minecraft.nix
+#      ../../modules/nixos/swww.nix
       inputs.home-manager.nixosModules.default
     ];
 
@@ -31,6 +32,17 @@ networking.nameservers = [ "185.222.222.222" "45.11.45.11" ];
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
+services.getty.autologinUser = "andi";
+services.greetd = {
+  enable = true;
+  settings = rec {
+    initial_session = {
+      command = "Hyprland";
+      user = "andi";
+    };
+    default_session = initial_session;
+  };
+};
 
   # Select internationalisation properties.
   i18n.defaultLocale = "de_DE.UTF-8";
@@ -40,9 +52,17 @@ networking.nameservers = [ "185.222.222.222" "45.11.45.11" ];
   };
 	programs.hyprland.enable = true;
 
+
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
-
+programs.bash.shellAliases = {
+  l = "ls -alh";
+  ll = "ls -l";
+  ls = "ls --color=tty";
+  rebuild = "sudo nixos-rebuild switch --flake /etc/nixos/#default";
+  configurate = "sudo nvim /etc/nixos/hosts/Gartroc/configuration.nix";
+};
   # Enable sound.
 	sound.enable = true;
 	security.rtkit.enable = true;
@@ -58,9 +78,14 @@ networking.nameservers = [ "185.222.222.222" "45.11.45.11" ];
 	programs.steam.enable = true;
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
 	nixpkgs.config.allowUnfree = true;
+# Enable Bluetooth
+hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+  services.blueman.enable = true;
+  programs.kdeconnect.enable = true;
 
-	environment.systemPackages = with pkgs; [
-	
+environment.systemPackages = with pkgs; [
+			
 		neovim
 		wget
 		waybar
@@ -75,7 +100,11 @@ networking.nameservers = [ "185.222.222.222" "45.11.45.11" ];
 		grim
 		slurp
 		wf-recorder
+		wl-clipboard
+		swappy
+		yazi
 		zip
+		unzip
 		alsa-utils
 		
 		firefox
@@ -84,9 +113,19 @@ networking.nameservers = [ "185.222.222.222" "45.11.45.11" ];
 	
 		lutris
 		prismlauncher
-		
+		bottles
+		wine
+		winetricks
+		qemu
+		speedtest-cli
+
+
 		dolphin
 		libreoffice
+		vlc
+		yt-dlp
+#		openshot-qt # --sip-4.19.25 not supported for interpreter python3.12--
+		inkscape
 	];
 
 
@@ -119,8 +158,17 @@ networking.nameservers = [ "185.222.222.222" "45.11.45.11" ];
   programs.mtr.enable = true;
   programs.gnupg.agent = {
   	enable = true;
+};
+
+
+# ---------------Stylix-------------------#
+
+stylix = {
+	enable = false;
+	image = /home/andi/Wallpapers/current.png;
+	autoEnable = true;
+};
   #enableSSHSupport = true;
-  };
 
   # List services that you want to enable:
 
@@ -158,4 +206,3 @@ networking.nameservers = [ "185.222.222.222" "45.11.45.11" ];
   system.stateVersion = "24.05"; # Did you read the comment?
 
 }
-
