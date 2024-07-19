@@ -60,7 +60,7 @@ programs.bash.shellAliases = {
   l = "ls -alh";
   ll = "ls -l";
   ls = "ls --color=tty";
-  rebuild = "sudo nixos-rebuild switch --flake /etc/nixos/#default";
+  rebuild = "/etc/nixos/modules/scripts/rebuild.sh";
   configurate = "sudo nvim /etc/nixos/hosts/Gartroc/configuration.nix";
 };
   # Enable sound.
