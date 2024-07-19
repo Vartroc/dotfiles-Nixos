@@ -7,6 +7,7 @@
       ./hardware-configuration.nix
 #      ../../modules/nixos/swww.nix
       inputs.home-manager.nixosModules.default
+      ../../modules/nixos/greetd.nix
     ];
 
 	boot = {
