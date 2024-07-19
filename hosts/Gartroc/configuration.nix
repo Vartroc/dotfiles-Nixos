@@ -37,7 +37,7 @@ services.greetd = {
   enable = true;
   settings = rec {
     initial_session = {
-      command = "niri-session";
+      command = "Hyprland";
       user = "andi";
     };
     default_session = initial_session;
@@ -63,6 +63,8 @@ programs.bash.shellAliases = {
   rebuild = "/etc/nixos/modules/scripts/rebuild.sh";
   configurate = "sudo nvim /etc/nixos/hosts/Gartroc/configuration.nix";
 };
+
+programs.niri.enable = true;
   # Enable sound.
 	sound.enable = true;
 	security.rtkit.enable = true;
@@ -128,7 +130,7 @@ environment.systemPackages = with pkgs; [
 		inkscape
 		osu-lazer
 		discord
-		niri
+#		niri
 	];
 
 

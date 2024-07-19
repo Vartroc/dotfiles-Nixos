@@ -3,6 +3,7 @@
 set -e
 
 echo "This script will add everything in /etc/nixos/ to git, commit the changes and rebuild your system"
+echo -e "rebuilding... \n\n\n-------------------- Git Commmit --------------------\n"
 cd /etc/nixos/
 sudo git add * 
 read -rp "Enter git commit message: " message
