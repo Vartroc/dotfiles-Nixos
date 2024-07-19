@@ -1,9 +1,9 @@
 { config, inputs, lib, options, ... }:
-{
+
 let
 	cfg = options.custom;
 in
-
+{
 options.custom = { 
 	greetd = {
 		enable = lib.mkEnableOption "greetd";
