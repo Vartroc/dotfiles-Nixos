@@ -20,7 +20,7 @@ inputs = {
 
 
 outputs = { self, nixpkgs, ... }@inputs: {
-	nixosConfigurations.default = nixpkgs.lib.nixosSystem {
+	nixosConfigurations.Gartroc = nixpkgs.lib.nixosSystem {
 		specialArgs = {inherit inputs;};
 		modules = [
         		./hosts/Gartroc/configuration.nix
