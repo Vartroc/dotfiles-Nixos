@@ -31,4 +31,5 @@ config = {
 		services.getty.autologinUser = "andi";
 	};
 };
+
 }
