@@ -1,4 +1,4 @@
-{ config, inputs, lib, pkgs, ... }:
+{ config, inputs, lib, pkgs, options, ... }:
 
 
 {
@@ -23,6 +23,9 @@
 			};
 		};
 	};
+
+options.custom.greetd.enable = false;
+options.custom.getty.enable = true;
 networking.nameservers = [ "185.222.222.222" "45.11.45.11" ];
   networking.hostName = "Gartroc"; # Define your hostname.
   networking.hostId = "afcefed7";
@@ -32,18 +35,7 @@ networking.nameservers = [ "185.222.222.222" "45.11.45.11" ];
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
-services.getty.autologinUser = "andi";
-services.greetd = {
-  enable = false;
-  settings = rec {
-    initial_session = {
-      command = "Hyprland";
-      user = "andi";
-    };
-    default_session = initial_session;
-  };
-};
-
+	custo
   # Select internationalisation properties.
   i18n.defaultLocale = "de_DE.UTF-8";
   console = {
