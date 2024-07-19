@@ -27,9 +27,9 @@ config = {
 			};
 		};
 	};
-	getty = lib.mkIf config.getty.enable {
-		services.getty.autologinUser = "andi";
-	};
+#	getty = lib.mkIf config.getty.enable {
+#		services.getty.autologinUser = "andi";
+#	};
 };
 
 }
