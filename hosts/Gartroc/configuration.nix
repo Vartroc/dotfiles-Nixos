@@ -35,7 +35,6 @@ networking.nameservers = [ "185.222.222.222" "45.11.45.11" ];
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
-	custo
   # Select internationalisation properties.
   i18n.defaultLocale = "de_DE.UTF-8";
   console = {
