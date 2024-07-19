@@ -1,4 +1,4 @@
-{ services, pkgs, config, inputs, lib, ... }:
+{:q pkgs, config, inputs, lib, ... }:
 
 {
 options = { 
@@ -14,8 +14,7 @@ options = {
 	};
 };
 
-config = {
-	greetd = lib.mkIf config.greetd.enable {
+config = lib.mkIf config.greetd.enable {
 		services.greetd = {
 			enable = true;
 			settings = rec {
