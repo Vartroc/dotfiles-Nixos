@@ -5,7 +5,7 @@ options = {
 	greetd = {
 		enable = lib.mkEnableOption "greetd";
 		command = lib.mkOption {
-			type = types.str;
+			type = str;
 			default = "Hyprland";
 		};
 	};
