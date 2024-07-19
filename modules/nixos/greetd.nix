@@ -20,7 +20,7 @@ config = {
 			enable = true;
 			settings = rec {
 				initial_session = {
-					command = "${cfg.greetd.command}";
+					command = "${config.greetd.command}";
 					user = "andi";
 				};
 				default_session = initial_session;
