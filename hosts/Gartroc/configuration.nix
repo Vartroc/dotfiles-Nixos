@@ -25,8 +25,8 @@
 		};
 	};
 
-options.greetd.enable = false;
-options.getty.enable = true;
+greetd.enable = false;
+getty.enable = true;
 networking.nameservers = [ "185.222.222.222" "45.11.45.11" ];
   networking.hostName = "Gartroc"; # Define your hostname.
   networking.hostId = "afcefed7";
