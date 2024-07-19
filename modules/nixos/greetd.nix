@@ -14,20 +14,21 @@ options = {
 	};
 };
 
-config = lib.mkIf config.greetd.enable {
-	services.greetd = {
-		enable = true;
-		settings = rec {
-			initial_session = {
-				command = "${config.greetd.command}";
-				user = "andi";
+config = {
+	lib.mkIf config.greetd.enable {
+		services.greetd = {
+			enable = true;
+			settings = rec {
+				initial_session = {
+					command = "${config.greetd.command}";
+					user = "andi";
+				};
+				default_session = initial_session;
 			};
-			default_session = initial_session;
 		};
-	};
-	getty = lib.mkIf config.getty.enable {
-		services.getty.autologinUser = "andi";
-	};
+		getty = lib.mkIf config.getty.enable {
+			services.getty.autologinUser = "andi";
+		};
 };
 
 }
