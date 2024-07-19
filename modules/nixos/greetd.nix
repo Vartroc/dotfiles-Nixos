@@ -25,10 +25,9 @@ config = lib.mkIf config.greetd.enable {
 			default_session = initial_session;
 		};
 	};
+	getty = lib.mkIf config.getty.enable {
+		services.getty.autologinUser = "andi";
+	};
 };
-#	getty = lib.mkIf config.getty.enable {
-#		services.getty.autologinUser = "andi";
-#	};
-
 
 }
