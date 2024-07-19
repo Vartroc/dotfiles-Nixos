@@ -12,5 +12,5 @@ read -rp "Enter host (default: Gartroc): " host
 
 read -rp "Enter options to pass to the command (default: none): " options
 echo -e "rebuilding... \n\n\n-------------------- ${host:-Gartroc} --------------------\n"
-sudo nixos-rebuild switch --flake /etc/nixos/#{$host:-"Gartroc"} $options
+sudo nixos-rebuild switch --flake /etc/nixos/#"{$host:-Gartroc}" $options
 
