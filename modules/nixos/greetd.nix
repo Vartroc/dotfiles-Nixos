@@ -1,10 +1,10 @@
-{ config, inputs, lib, options, ... }:
+{ pkgs, config, lib, ... }:
 
 let
 	cfg = options.custom;
 in
 {
-options.custom = { 
+options = { 
 	greetd = {
 		enable = lib.mkEnableOption "greetd";
 		command = lib.mkOption {
@@ -18,7 +18,7 @@ options.custom = {
 };
 
 config = {
-	lib.mkIf cfg.greetd.enable {
+	greetd = lib.mkIf cfg.greetd.enable {
 		services.greetd = {
 			enable = true;
 			settings = rec {
@@ -30,7 +30,7 @@ config = {
 			};
 		}
 	};
-	lib.mkIf cfg.getty.enable {
+	getty = lib.mkIf cfg.getty.enable = {
 		services.getty.autologinUser = "andi";
 	};
 }
