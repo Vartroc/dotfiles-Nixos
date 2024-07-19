@@ -10,6 +10,6 @@ sudo git -C /etc/nixos commit -m "$message" -a
 
 read -rp "Enter host (default: Gartroc): " -i "Gartroc" host
 read -rp "Enter options to pass to the command (default: none): " -i "" options
-echo "rebuilding..."
+echo -e "rebuilding... \n\n\n-------------------- $host --------------------\n"
 sudo nixos-rebuild switch --flake /etc/nixos/#$host $options
 
