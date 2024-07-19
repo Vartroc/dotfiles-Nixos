@@ -8,8 +8,9 @@ sudo git add *
 read -rp "Enter git commit message: " message
 sudo git -C /etc/nixos commit -m "$message" -a
 
-read -rp "Enter host (default: Gartroc): " -i "Gartroc" host
-read -rp "Enter options to pass to the command (default: none): " -i "" options
-echo -e "rebuilding... \n\n\n-------------------- $host --------------------\n"
-sudo nixos-rebuild switch --flake /etc/nixos/#$host $options
+read -rp "Enter host (default: Gartroc): " host
+
+read -rp "Enter options to pass to the command (default: none): " options
+echo -e "rebuilding... \n\n\n-------------------- ${host:-Gartroc} --------------------\n"
+sudo nixos-rebuild switch --flake /etc/nixos/#{$host:-Gartroc} $options
 
