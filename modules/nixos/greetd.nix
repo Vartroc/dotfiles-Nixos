@@ -14,7 +14,7 @@ options = {
 	};
 };
 
-config = mkMerge
+config = lib.mkMerge
 	[
 		(lib.mkIf config.greetd.enable {
 			services.greetd = {
