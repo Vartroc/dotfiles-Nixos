@@ -50,7 +50,7 @@ services.greetd = {
   	font = "Lat2-Terminus16";
   	keyMap = "de";
   };
-#	programs.hyprland.enable = true;
+	programs.hyprland.enable = true;
 
 
 
@@ -127,6 +127,7 @@ environment.systemPackages = with pkgs; [
 #		openshot-qt # --sip-4.19.25 not supported for interpreter python3.12--
 		inkscape
 		osu-lazer
+		discord
 	];
 
 
