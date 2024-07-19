@@ -3,7 +3,7 @@ description = "Nixos config flake";
 
 inputs = {
 	nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-
+	niri.url = "github:sodiboo/niri-flake";3
 	home-manager = {
 		url = "github:nix-community/home-manager";
 		inputs.nixpkgs.follows = "nixpkgs";
@@ -30,6 +30,7 @@ outputs = { self, nixpkgs, ... }@inputs: {
             			home-manager.useUserPackages = true;
           		}
 			inputs.stylix.nixosModules.stylix
+			inputs.niri.nixosModules.niri
 		];
     	};
 };
