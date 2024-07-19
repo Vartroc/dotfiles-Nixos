@@ -25,7 +25,7 @@ config = {
 				};
 				default_session = initial_session;
 			};
-		}
+		};
 	};
 	getty = lib.mkIf config.getty.enable = {
 		services.getty.autologinUser = "andi";
