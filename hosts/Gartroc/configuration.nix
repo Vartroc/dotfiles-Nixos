@@ -128,6 +128,7 @@ environment.systemPackages = with pkgs; [
 		inkscape
 		osu-lazer
 		discord
+		niri-session
 	];
 
 
