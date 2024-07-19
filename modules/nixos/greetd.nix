@@ -1,8 +1,5 @@
 { pkgs, config, lib, ... }:
 
-let
-	cfg = options.custom;
-in
 {
 options = { 
 	greetd = {
@@ -18,7 +15,7 @@ options = {
 };
 
 config = {
-	greetd = lib.mkIf cfg.greetd.enable {
+	greetd = lib.mkIf config.greetd.enable {
 		services.greetd = {
 			enable = true;
 			settings = rec {
@@ -30,7 +27,7 @@ config = {
 			};
 		}
 	};
-	getty = lib.mkIf cfg.getty.enable = {
+	getty = lib.mkIf config.getty.enable = {
 		services.getty.autologinUser = "andi";
 	};
 }
