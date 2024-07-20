@@ -10,22 +10,23 @@ options = {
 		};
 	};
 };
-config = lib.mkIf config.bootloader.grub {
-	boot = {
-		loader = {
-			grub = {
-				enable = true;
-				useOSProber = true;
-				efiSupport = true;
-				efiInstallAsRemovable = true;
-				lib.mkIf config.bootloader.zfs.enable {
-					zfsSupport = true;
-					mirroredBoots = [
-						{ devices = [ "nodev" ]; path = "/boot"; }
-					];
-				};
-			};
+config = lib.mkMerge [
+	(lib.mkIf config.bootloader.grub {
+		boot.loader.grub = {
+			enable = true;
+			useOSProber = true;
+			efiSupport = true;
+			efiInstallAsRemovable = true;
 		};
 	};
-};
+	)
+	(lib.mkIf config.bootloader.zfs.enable {
+		boot.loader.grub = {
+			zfsSupport = true;
+			mirroredBoots = [
+				{ devices = [ "nodev" ]; path = "/boot"; }
+			];
+		};
+	};)
+];
 }
