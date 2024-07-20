@@ -10,6 +10,7 @@
       ../../modules/nixos/boot.nix
       ../../modules/nixos/networking.nix
       ../../modules/nixos/localization.nix
+      ../../modules/nixos/bash.nix
     ];
 
 /*	boot = {
