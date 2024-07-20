@@ -6,7 +6,7 @@ options = {
 			enable = lib.mkEnableOption "grub-loader";
 		};
 		zfs = {
-			enable = lib.mkEnableOpiton "zfs-support for bootloader";
+			enable = lib.mkEnableOption "zfs-support for bootloader";
 		};
 	};
 };
