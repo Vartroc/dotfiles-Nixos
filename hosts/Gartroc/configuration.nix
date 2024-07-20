@@ -9,7 +9,7 @@
       ../../modules/nixos/greetd.nix
       ../../modules/nixos/boot.nix
       ../../modules/nixos/networking.nix
-      ../../modules/localization.nix
+      ../../modules/nixos/localization.nix
     ];
 
 /*	boot = {
