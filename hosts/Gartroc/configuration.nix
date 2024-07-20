@@ -35,30 +35,11 @@ bootloader = {
 };
 networking-custom.enable = true;
 localization.enable = true;
-  # Set your time zone.
-  time.timeZone = "Europe/Berlin";
-  # Select internationalisation properties.
-  i18n.defaultLocale = "de_DE.UTF-8";
-  console = {
-  	font = "Lat2-Terminus16";
-  	keyMap = "de";
-  };
-	programs.hyprland.enable = true;
-
-
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-programs.bash.shellAliases = {
-  l = "ls -alh";
-  ll = "ls -l";
-  ls = "ls --color=tty";
-  rebuild = "/etc/nixos/modules/scripts/rebuild.sh";
-  configurate = "sudo nvim /etc/nixos/hosts/Gartroc/configuration.nix";
-};
-
+programs.hyprland.enable = true;
 programs.niri.enable = true;
-  # Enable sound.
+services.printing.enable = true;
+bash.aliases.enable = true;
+# Enable sound.
 	sound.enable = true;
 	security.rtkit.enable = true;
 	services.pipewire = {
