@@ -7,6 +7,7 @@
 #      ../../modules/nixos/swww.nix
       inputs.home-manager.nixosModules.default
       ../../modules/nixos/greetd.nix
+      ../../modules/nixos/boot.nix
     ];
 
 /*	boot = {
