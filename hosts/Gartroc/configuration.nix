@@ -8,6 +8,8 @@
       inputs.home-manager.nixosModules.default
       ../../modules/nixos/greetd.nix
       ../../modules/nixos/boot.nix
+      ../../modules/nixos/networking.nix
+      ../../modules/localization.nix
     ];
 
 /*	boot = {
@@ -31,14 +33,8 @@ bootloader = {
 	grub.enable = true;
 	zfs.enable = true;
 };
-
-networking.nameservers = [ "185.222.222.222" "45.11.45.11" ];
-  networking.hostName = "Gartroc"; # Define your hostname.
-  networking.hostId = "afcefed7";
-  # Pick only one of the below networking options.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
-
+networking-custom.enable = true;
+localization.enable = true;
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
   # Select internationalisation properties.
