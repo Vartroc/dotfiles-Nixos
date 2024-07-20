@@ -11,7 +11,7 @@ options = {
 	};
 };
 config = lib.mkMerge [
-	(lib.mkIf config.bootloader.grub {
+	(lib.mkIf config.bootloader.grub.enable {
 		boot.loader.grub = {
 			enable = true;
 			useOSProber = true;
