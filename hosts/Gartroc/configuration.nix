@@ -9,7 +9,7 @@
       ../../modules/nixos/greetd.nix
     ];
 
-	boot = {
+/*	boot = {
 		loader = {
 			grub = {
 				enable = true;
@@ -23,9 +23,14 @@
 			};
 		};
 	};
-
+*/
 greetd.enable = false;
 getty.enable = true;
+bootloader = {
+	grub.enable = true;
+	zfs.enable = true;
+};
+
 networking.nameservers = [ "185.222.222.222" "45.11.45.11" ];
   networking.hostName = "Gartroc"; # Define your hostname.
   networking.hostId = "afcefed7";
