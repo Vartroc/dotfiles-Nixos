@@ -1,7 +1,9 @@
 { config, lib, ... }:
 {
-options.bash = {
-	aliases.enable = lib.mkEnableOption "Bash Aliases";
+options = {
+	bash = {
+		aliases.enable = lib.mkEnableOption "Bash Aliases";
+	};
 };
 config = lib.mkIf config.bash.aliases.enable {
 	programs.bash.shellAliases = {
