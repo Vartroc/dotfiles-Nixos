@@ -18,7 +18,7 @@ config = lib.mkMerge [
 			efiSupport = true;
 			efiInstallAsRemovable = true;
 		};
-	};
+	}
 	)
 	(lib.mkIf config.bootloader.zfs.enable {
 		boot.loader.grub = {
@@ -27,6 +27,7 @@ config = lib.mkMerge [
 				{ devices = [ "nodev" ]; path = "/boot"; }
 			];
 		};
-	};)
+	}
+	)
 ];
 }
