@@ -67,7 +67,8 @@ environment.systemPackages = with pkgs; [
 		zip
 		unzip
 		alsa-utils
-		
+		figlet
+
 		firefox
 		pavucontrol
 		easyeffects
