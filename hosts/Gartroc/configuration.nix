@@ -1,33 +1,17 @@
 { config, inputs, lib, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-#      ../../modules/nixos/swww.nix
-      inputs.home-manager.nixosModules.default
-      ../../modules/nixos/greetd.nix
-      ../../modules/nixos/boot.nix
-      ../../modules/nixos/networking.nix
-      ../../modules/nixos/localization.nix
-      ../../modules/nixos/bash.nix
-    ];
+imports = [
+	./hardware-configuration.nix
+#	../../modules/nixos/swww.nix
+# 	inputs.home-manager.nixosModules.default
+	../../modules/nixos/greetd.nix
+	../../modules/nixos/boot.nix
+	../../modules/nixos/networking.nix
+	../../modules/nixos/localization.nix
+	../../modules/nixos/bash.nix
+];
 
-/*	boot = {
-		loader = {
-			grub = {
-				enable = true;
-				useOSProber = true;
-				zfsSupport = true;
-				efiSupport = true;
-				efiInstallAsRemovable = true;
-				mirroredBoots = [
-					{ devices = [ "nodev" ]; path = "/boot"; }
-				];
-			};
-		};
-	};
-*/
 greetd.enable = false;
 getty.enable = true;
 bootloader = {
@@ -37,7 +21,7 @@ bootloader = {
 networking-custom.enable = true;
 localization.enable = true;
 programs.hyprland.enable = true;
-programs.niri.enable = true;
+#  programs.niri.enable = true;
 services.printing.enable = true;
 bash.aliases.enable = true;
 # Enable sound.
@@ -144,7 +128,7 @@ environment.systemPackages = with pkgs; [
 # ---------------Stylix-------------------#
 
 stylix = {
-	enable = true;
+	enable = false;
 	image = /home/andi/Wallpapers/current.png;
 	autoEnable = true;
 };
