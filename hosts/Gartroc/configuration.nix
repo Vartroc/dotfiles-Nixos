@@ -68,6 +68,7 @@ environment.systemPackages = with pkgs; [
 		unzip
 		alsa-utils
 		figlet
+		lolcat
 
 		firefox
 		pavucontrol
