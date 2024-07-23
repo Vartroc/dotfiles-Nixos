@@ -22,7 +22,7 @@ services.minecraft-servers = {
 */	
     		package = pkgs.fabricServers.fabric-1_20_1.override { loaderVersion = "0.15.11"; };
     		symlinks = {
-      			"mods" = "/home/andi/.minecraft-BMC2-custom3/mods";
+      			"mods" = "/home/andi/minecraft-hexamods/mods";
   		};	
 		
 	};
