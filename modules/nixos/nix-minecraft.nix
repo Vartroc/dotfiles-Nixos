@@ -14,7 +14,7 @@ services.minecraft-servers = {
 	servers.hexagon = {
 		enable = true;
 		autoStart = true;
-		restart = "always";
+#		restart = "always";
 /*		serverProperties = {
 			
 
