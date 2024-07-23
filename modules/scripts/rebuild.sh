@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 set -e
-echo -e "This script will add everything in /etc/nixos/ to git, commit the changes and rebuild your system\n"
+echo -e "This script will test your configuration, add everything in /etc/nixos/ to git, commit the changes and rebuild your system\n"
 font="rozzo"
 
 figlet -tc -f $font Testing... | lolcat

@@ -3,16 +3,14 @@ description = "Nixos config flake";
 
 inputs = {
 	nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-	niri.url = "github:sodiboo/niri-flake";
 	home-manager = {
 		url = "github:nix-community/home-manager";
 		inputs.nixpkgs.follows = "nixpkgs";
 	};
 
 	hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-
 	nix-minecraft.url = "github:Infinidoge/nix-minecraft";
-
+	niri.url = "github:sodiboo/niri-flake";
 	stylix.url = "github:danth/stylix";
 };
 
