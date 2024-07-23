@@ -4,7 +4,7 @@ imports = [ inputs.nix-minecraft.nixosModules.minecraft-servers ];
 nixpkgs.overlays = [ inputs.nix-minecraft.overlay ];
 
 environment.systemPackages = [
-	fabricServers.fabric-1_19_2
+	pkgs.fabricServers.fabric-1_19_2
 ];
 services.minecraft-servers = {
 	enable = true;
@@ -14,7 +14,7 @@ services.minecraft-servers = {
 		enable = true;
 		package = pkgs.fabricServers.fabric-1_19_2;
 		autoStart = true;
-		restart = true;
+		restart = "always";
 /*		serverProperties = {
 			
 

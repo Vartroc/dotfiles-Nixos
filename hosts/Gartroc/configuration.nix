@@ -10,6 +10,7 @@ imports = [
 	../../modules/nixos/networking.nix
 	../../modules/nixos/localization.nix
 	../../modules/nixos/bash.nix
+	../../modules/nixos/nix-minecraft.nix
 ];
 
 greetd.enable = false;
