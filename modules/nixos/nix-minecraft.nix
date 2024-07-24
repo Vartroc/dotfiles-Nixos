@@ -2,7 +2,7 @@
 let
   modpack = pkgs.fetchPackwizModpack {
     url = "https://raw.githubusercontent.com/Vartroc/hexamods/main/pack.toml";
-    packHash = "iB9cCf/FD5Roc2u+Bj1yll+1wj7tEToP2YQoIVLzIac=";
+    packHash = "tlRxdimVffwwYEAN/1j7eXLkqueGorCAQDaqlnOgS78=";
   };
 in
 {
