@@ -1,4 +1,10 @@
 { inputs, config, lib, pkgs, ...}:
+let
+  modpack = pkgs.fetchPackwizModpack {
+    url = "https://raw.githubusercontent.com/Vartroc/hexamods/main/pack.toml";
+    hash = "sha256-12mjga2612x46x1s4s82fpa20ysqclvaw3mzxvz5h9qallyi7sg3";
+  };
+in
 {
 imports = [ inputs.nix-minecraft.nixosModules.minecraft-servers ];
 nixpkgs.overlays = [ inputs.nix-minecraft.overlay ];
@@ -7,6 +13,7 @@ environment.systemPackages = [
 	pkgs.fabricServers.fabric-1_20_1
 	pkgs.packwiz
 ];
+
 services.minecraft-servers = {
 	enable = true;
 	eula = true;
@@ -14,20 +21,10 @@ services.minecraft-servers = {
 	servers.hexagon = {
 		enable = true;
 		autoStart = true;
-#		restart = "always";
-		serverProperties = {
-			white-list = true;
+    		package = pkgs.fabricServers.fabric-1_20_1.override { loaderVersion = "0.15.11"; };   		
+		symlinks = {
+      			"mods" = "${modpack}/mods";
 		};
-	
-    		package = pkgs.fabricServers.fabric-1_20_1.override { loaderVersion = "0.15.11"; };
-    		symlinks = {
-      			"mods" = "/home/andi/minecraft-hexamods/mods";
-  		};
-
-		whitelist = {
-			Vartroc = "ce3a67ad-3a84-4bcb-a809-ad9d7330de01";
-		};
-		
 	};
 };
 }
