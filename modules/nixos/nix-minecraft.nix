@@ -1,7 +1,7 @@
 { inputs, config, lib, pkgs, ...}:
 let
   modpack = pkgs.fetchPackwizModpack {
-    url = "https://raw.githubusercontent.com/Vartroc/hexamods/main/pack.toml";
+    url = "https://raw.githubusercontent.com/Vartroc/hexagonmods/main/pack.toml";
     packHash = "yCOCXEsOs8yZaNni8GA/OgBEtovhrah+g/yHUd4Yc4s=";
   };
 in
