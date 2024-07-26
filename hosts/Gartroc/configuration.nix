@@ -26,7 +26,6 @@ programs.hyprland.enable = true;
 services.printing.enable = true;
 bash.aliases.enable = true;
 # Enable sound.
-	sound.enable = true;
 	security.rtkit.enable = true;
 	services.pipewire = {
 		enable = true;

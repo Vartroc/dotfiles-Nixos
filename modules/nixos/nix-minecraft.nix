@@ -1,8 +1,8 @@
 { inputs, config, lib, pkgs, ...}:
 let
   modpack = pkgs.fetchPackwizModpack {
-    url = "https://raw.githubusercontent.com/Vartroc/hexamods/main/pack.toml";
-    packHash = "";
+    url = "https://raw.githubusercontent.com/Vartroc/testing/main/pack.toml";
+    packHash = "AeQoPDdR2F4+R+YEJwY2J5+upC7tNc7KPGR+Gmax0/U=";
   };
 in
 {
@@ -18,12 +18,12 @@ services.minecraft-servers = {
 	enable = true;
 	eula = true;
 	openFirewall = true;
-	servers.hexagon = {
+	servers.hexatron = {
 		enable = true;
 		autoStart = true;
     		package = pkgs.fabricServers.fabric-1_20_1.override { loaderVersion = "0.15.11"; };   		
 		symlinks = {
-      			"mods" = "${modpack}/mods";
+			"mods" = "${modpack}/mods";
 		};
 	};
 };
