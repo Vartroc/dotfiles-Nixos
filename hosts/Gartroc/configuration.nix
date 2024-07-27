@@ -49,6 +49,7 @@ environment.systemPackages = with pkgs; [
 			
 		neovim
 		wget
+		tmux
 		waybar
 		networkmanagerapplet
 		swww
