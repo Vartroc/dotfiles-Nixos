@@ -18,7 +18,7 @@ services.minecraft-servers = {
 	enable = true;
 	eula = true;
 	openFirewall = true;
-	servers.hexagon = {
+	servers.testing = {
 		enable = true;
 		autoStart = true;
     		package = pkgs.fabricServers.fabric-1_20_1.override { loaderVersion = "0.15.11"; };   		
