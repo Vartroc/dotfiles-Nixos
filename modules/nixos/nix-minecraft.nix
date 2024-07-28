@@ -32,7 +32,7 @@ services.minecraft-servers = {
     		package = pkgs.fabricServers.fabric-1_20_1.override { loaderVersion = "0.15.11"; };   		
 		symlinks = {
       			"mods" = "${modpack}/mods";
-			text-file = pkgs.writeTextFile {
+			"ops.json" = pkgs.writeTextFile {
       				name = "ops.json";
       				text = "[ { \"uuid\": \"ce3a67ad-3a84-4bcb-a809-ad9d7330de01\", \"name\": \"Vartroc\", \"level\": 4 } ]";
     			};
