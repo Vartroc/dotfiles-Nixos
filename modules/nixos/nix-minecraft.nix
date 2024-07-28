@@ -1,8 +1,8 @@
 { inputs, config, lib, pkgs, ...}:
 let
   modpack = pkgs.fetchPackwizModpack {
-    url = "https://raw.githubusercontent.com/Vartroc/minimal-mods/main/pack.toml";
-    packHash = "QSxjCPLejdm2HubXKdePl7xOk4eXsLI0YRbDetsKXR8=";
+    url = "https://raw.githubusercontent.com/Vartroc/minimal-mods/not_broken/pack.toml";
+    packHash = "LOvEagOHrtARa/oo8RDdjHdxaSyE9XPfaFpEkbT3KeE=";
   };
 in
 {
@@ -18,9 +18,17 @@ services.minecraft-servers = {
 	enable = true;
 	eula = true;
 	openFirewall = true;
-	servers.testing = {
+	servers.better-mc = {
+/*		serverProperties = {
+			white-list = true;
+		};*/
 		enable = true;
 		autoStart = true;
+/*		whitelist = { 
+			Vartroc = "ce3a67ad-3a84-4bcb-a809-ad9d7330de01";
+			kathu05 = "8c3c5600-2f7e-49f9-9590-c2d43abfe467";
+			rreeper = "22d62250-fe23-4894-8006-0a23a0529631";
+		};*/
     		package = pkgs.fabricServers.fabric-1_20_1.override { loaderVersion = "0.15.11"; };   		
 		symlinks = {
       			"mods" = "${modpack}/mods";
