@@ -18,7 +18,7 @@ services.minecraft-servers = {
 	enable = true;
 	eula = true;
 	openFirewall = true;
-	servers.hexagonal_planar_2 = {
+	servers.hexagonal_planar_3 = {
 /*		serverProperties = {
 			white-list = true;
 		};*/
