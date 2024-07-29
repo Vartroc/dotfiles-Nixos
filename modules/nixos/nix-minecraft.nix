@@ -24,6 +24,7 @@ services.minecraft-servers = {
 			difficulty = "normal";
 			view-distance = 16;
 		};
+		jvmOpts = "-Xms6144M -Xmx8192M";
 		enable = true;
 		autoStart = true;
 		whitelist = { 
