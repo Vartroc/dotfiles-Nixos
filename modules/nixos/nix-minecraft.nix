@@ -19,16 +19,20 @@ services.minecraft-servers = {
 	eula = true;
 	openFirewall = true;
 	servers.hexagonal_planar_4 = {
-/*		serverProperties = {
+		serverProperties = {
 			white-list = true;
-		};*/
+			difficulty = "normal";
+			view-distance = 16;
+		};
 		enable = true;
 		autoStart = true;
-/*		whitelist = { 
+		whitelist = { 
 			Vartroc = "ce3a67ad-3a84-4bcb-a809-ad9d7330de01";
 			kathu05 = "8c3c5600-2f7e-49f9-9590-c2d43abfe467";
 			rreeper = "22d62250-fe23-4894-8006-0a23a0529631";
-		};*/
+			KeksdosenAlarm = "f7778498-2077-48b5-810b-d4c1042147b8";
+			JoMei9019 = "0fc25f7d-fa61-41ec-957f-e92f75c209c0";
+		};
     		package = pkgs.fabricServers.fabric-1_20_1.override { loaderVersion = "0.15.11"; };   		
 		symlinks = {
       			"mods" = "${modpack}/mods";
