@@ -2,7 +2,7 @@
 let
   modpack = pkgs.fetchPackwizModpack {
     url = "https://raw.githubusercontent.com/Vartroc/minimal-mods/not_broken/pack.toml";
-    packHash = "/9CRwAFGQvMz2VwL6nhFeiTrTa8tffzGLwWDEjMZYwo=";
+    packHash = "jtyEm6kZT3SYPBHFn0yQ+979DHGmeLHUsTeCGs1qwjU=";
   };
 in
 {
@@ -18,7 +18,7 @@ services.minecraft-servers = {
 	enable = true;
 	eula = true;
 	openFirewall = true;
-	servers.hexagonal_planar_0 = {
+	servers.hexagonal_planar_2 = {
 /*		serverProperties = {
 			white-list = true;
 		};*/
