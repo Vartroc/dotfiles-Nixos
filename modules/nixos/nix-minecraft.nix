@@ -1,8 +1,8 @@
 { inputs, config, lib, pkgs, ...}:
 let
   modpack = pkgs.fetchPackwizModpack {
-    url = "https://raw.githubusercontent.com/Vartroc/minimal-mods/61fc2ea1b54d3beb2dcab279bc945bed8d88c724/pack.toml";
-    packHash = "IfjzxAdvBH1vXk+69iUC/S67mXQAJLkOCEyA6iWFxjw=";
+    url = "https://raw.githubusercontent.com/Vartroc/minimal-mods/not_broken/pack.toml";
+    packHash = "/9CRwAFGQvMz2VwL6nhFeiTrTa8tffzGLwWDEjMZYwo=";
   };
 in
 {
@@ -18,7 +18,7 @@ services.minecraft-servers = {
 	enable = true;
 	eula = true;
 	openFirewall = true;
-	servers.final_2 = {
+	servers.hexagonal_planar_0 = {
 /*		serverProperties = {
 			white-list = true;
 		};*/
