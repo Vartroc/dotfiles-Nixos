@@ -1,8 +1,8 @@
 { inputs, config, lib, pkgs, ...}:
 let
   modpack = pkgs.fetchPackwizModpack {
-    url = "https://raw.githubusercontent.com/Vartroc/minimal-mods/not_broken/pack.toml";
-    packHash = "jtyEm6kZT3SYPBHFn0yQ+979DHGmeLHUsTeCGs1qwjU=";
+    url = "https://raw.githubusercontent.com/Vartroc/minimal-mods/5afb886a3807e7cb4c499ffb21e0d36c4266c65f/pack.toml";
+    packHash = "vUktLhwlOQL5NhDwavIQ19dcQ+s77LLlNrFa2cayskg=";
   };
 in
 {
