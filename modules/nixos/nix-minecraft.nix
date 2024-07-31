@@ -2,7 +2,7 @@
 let
   modpack = pkgs.fetchPackwizModpack {
     url = "https://raw.githubusercontent.com/Vartroc/minimal-mods/not_broken/pack.toml";
-    packHash = "gcNhR47IWfrHavuvWmdXsnlRtukSlbreNjM8aYvGoOA=";
+    packHash = "tVmz9vZ5/usfHhqc1zZbMKm/KsvOb5BsRGOn1PtthC0=";
   };
 in
 {
@@ -12,6 +12,7 @@ nixpkgs.overlays = [ inputs.nix-minecraft.overlay ];
 environment.systemPackages = [
 	pkgs.fabricServers.fabric-1_20_1
 	pkgs.packwiz
+	pkgs.xautoclick
 ];
 
 services.minecraft-servers = {
