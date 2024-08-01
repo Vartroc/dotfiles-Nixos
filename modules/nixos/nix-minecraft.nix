@@ -2,7 +2,7 @@
 let
   modpack = pkgs.fetchPackwizModpack {
     url = "https://raw.githubusercontent.com/Vartroc/minimal-mods/not_broken/pack.toml";
-    packHash = "tVmz9vZ5/usfHhqc1zZbMKm/KsvOb5BsRGOn1PtthC0=";
+    packHash = "Vk7jpgPwfktzQNrpn1bIPYpUYanhFCtcz3TuGYjA4hM=";
   };
 in
 {
