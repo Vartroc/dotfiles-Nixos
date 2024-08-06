@@ -32,6 +32,7 @@ essential-packages.enable = true;
 
 programs.neovim.enable = true;
 
+
 # Enable sound.
 	security.rtkit.enable = true;
 	services.pipewire = {
