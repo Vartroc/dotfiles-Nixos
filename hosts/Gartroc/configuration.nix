@@ -11,7 +11,7 @@ imports = [
 	../../modules/nixos/localization.nix
 	../../modules/nixos/bash.nix
 	../../modules/nixos/nix-minecraft.nix
-	/etc/nixos/modules/nixos/essential-packages.nix
+	../../modules/nixos/essential-packages.nix
 ];
 
 greetd.enable = false;
