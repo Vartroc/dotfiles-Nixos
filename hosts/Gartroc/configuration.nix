@@ -82,7 +82,8 @@ environment.systemPackages = with pkgs; [
 		winetricks
 		qemu
 		speedtest-cli
-
+		hyperfine
+		btop
 
 		dolphin
 		libreoffice
