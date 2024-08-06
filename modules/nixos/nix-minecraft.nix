@@ -1,8 +1,12 @@
 { inputs, config, lib, pkgs, ...}:
 let
-  modpack = pkgs.fetchPackwizModpack {
+  modpack_1 = pkgs.fetchPackwizModpack {
     url = "https://raw.githubusercontent.com/Vartroc/minimal-mods/not_broken/pack.toml";
     packHash = "Vk7jpgPwfktzQNrpn1bIPYpUYanhFCtcz3TuGYjA4hM=";
+  };
+  modpack_2 = pkgs.fetchPackwizModpack {
+	url = "https://raw.githubusercontent.com/Vartroc/cobblemon/main/pack.toml";
+	packHash = "t4rwiWusZcEIeFb9wljaxrhNACZ7XpLu+ozD0K3Hda4=";
   };
 in
 {
@@ -16,10 +20,10 @@ environment.systemPackages = [
 ];
 
 services.minecraft-servers = {
-	enable = false;
+	enable = true;
 	eula = true;
 	openFirewall = true;
-	servers.hexagonal_planar_4 = {
+	servers.hexagonal_planar_5 = {
 		serverProperties = {
 			white-list = true;
 			difficulty = "normal";
@@ -37,7 +41,7 @@ services.minecraft-servers = {
 		};
     		package = pkgs.fabricServers.fabric-1_20_1.override { loaderVersion = "0.15.11"; };   		
 		symlinks = {
-      			"mods" = "${modpack}/mods";
+      			"mods" = "${modpack_2}/mods";
 			"ops.json" = pkgs.writeTextFile {
       				name = "ops.json";
       				text = "[ { \"uuid\": \"ce3a67ad-3a84-4bcb-a809-ad9d7330de01\", \"name\": \"Vartroc\", \"level\": 4 } ]";

@@ -21,8 +21,10 @@
 	};
   };
 
-programs.rofi.enable = true;
-
+/*programs.rofi = {
+	enable = true;
+	location = "center";
+};*/
 #  wayland.windowManager.hyprland.enable = true;
 
   home.packages = [

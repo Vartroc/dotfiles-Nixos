@@ -8,7 +8,6 @@ config = lib.mkIf config.essential-packages.enable {
 	environment.systemPackages = with pkgs; [
 		wget
 		tmux
-#		git
 		grim
 		slurp
 		wl-clipboard
