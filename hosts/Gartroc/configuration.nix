@@ -11,6 +11,7 @@ imports = [
 	../../modules/nixos/localization.nix
 	../../modules/nixos/bash.nix
 	../../modules/nixos/nix-minecraft.nix
+	/etc/nixos/modules/nixos/essential-packages.nix
 ];
 
 greetd.enable = false;
@@ -25,6 +26,12 @@ programs.hyprland.enable = true;
 #  programs.niri.enable = true;
 services.printing.enable = true;
 bash.aliases.enable = true;
+essential-packages.enable = true;
+
+
+
+programs.neovim.enable = true;
+
 # Enable sound.
 	security.rtkit.enable = true;
 	services.pipewire = {
@@ -47,29 +54,12 @@ hardware.bluetooth.enable = true; # enables support for Bluetooth
 
 environment.systemPackages = with pkgs; [
 			
-		neovim
-		wget
-		tmux
 		waybar
 		networkmanagerapplet
 		swww
 		mako
 		libnotify
-		kitty
-		alacritty
-		rofi-wayland
-		git
-		grim
-		slurp
 		wf-recorder
-		wl-clipboard
-		swappy
-		yazi
-		zip
-		unzip
-		alsa-utils
-		figlet
-		lolcat
 
 		firefox
 		pavucontrol
