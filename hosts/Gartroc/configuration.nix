@@ -15,6 +15,7 @@ imports = [
 	../../modules/nixos/sound.nix
 	../../modules/nixos/bluetooth.nix
 	../../modules/nixos/users.nix
+	../../modules/nixos/gaming.nix
 ];
 
 greetd.enable = false;
@@ -33,12 +34,13 @@ essential-packages.enable = true;
 sound-module.enable = true;
 bluetooth-module.enable = true;
 andi.enable = true;
+gaming.enable = true;
+
 
 programs.neovim.enable = true;
 
 
 	# Missalanious
-	programs.steam.enable = true;
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
 	nixpkgs.config.allowUnfree = true;
 	programs.kdeconnect.enable = true;
@@ -56,8 +58,6 @@ environment.systemPackages = with pkgs; [
 		pavucontrol
 		easyeffects
 	
-		lutris
-		prismlauncher
 		bottles
 		wine
 		winetricks
@@ -72,7 +72,6 @@ environment.systemPackages = with pkgs; [
 		yt-dlp
 #		openshot-qt # --sip-4.19.25 not supported for interpreter python3.12--
 		inkscape
-		osu-lazer
 		discord
 #		niri
 	];
