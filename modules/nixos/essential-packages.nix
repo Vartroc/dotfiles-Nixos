@@ -22,7 +22,7 @@ config = lib.mkIf config.essential-packages.enable {
 		firefox
 		kitty
 		alacritty
-		rofi-wayland
+#		rofi-wayland
 	];
 };
 }

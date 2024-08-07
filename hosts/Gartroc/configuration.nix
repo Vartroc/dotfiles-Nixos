@@ -12,6 +12,9 @@ imports = [
 	../../modules/nixos/bash.nix
 	../../modules/nixos/nix-minecraft.nix
 	../../modules/nixos/essential-packages.nix
+	../../modules/nixos/sound.nix
+	../../modules/nixos/bluetooth.nix
+	../../modules/nixos/users.nix
 ];
 
 greetd.enable = false;
@@ -27,31 +30,18 @@ programs.hyprland.enable = true;
 services.printing.enable = true;
 bash.aliases.enable = true;
 essential-packages.enable = true;
-
-
+sound-module.enable = true;
+bluetooth-module.enable = true;
+andi.enable = true;
 
 programs.neovim.enable = true;
 
 
-# Enable sound.
-	security.rtkit.enable = true;
-	services.pipewire = {
-		enable = true;
-		alsa.enable = true;
-		alsa.support32Bit = true;
-		pulse.enable = true;
-		jack.enable = true;
-	};
-	
 	# Missalanious
 	programs.steam.enable = true;
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
 	nixpkgs.config.allowUnfree = true;
-# Enable Bluetooth
-hardware.bluetooth.enable = true; # enables support for Bluetooth
-  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
-  services.blueman.enable = true;
-  programs.kdeconnect.enable = true;
+	programs.kdeconnect.enable = true;
 
 environment.systemPackages = with pkgs; [
 			
@@ -99,11 +89,6 @@ environment.systemPackages = with pkgs; [
   # services.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.andi = {
-  	isNormalUser = true;
-  	extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-	initialPassword = "password";	
-  };
 
   home-manager = {
   	users = {
