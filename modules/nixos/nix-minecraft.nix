@@ -20,7 +20,7 @@ environment.systemPackages = [
 ];
 
 services.minecraft-servers = {
-	enable = true;
+	enable = false;
 	eula = true;
 	openFirewall = true;
 	servers.hexagonal_planar_6 = {

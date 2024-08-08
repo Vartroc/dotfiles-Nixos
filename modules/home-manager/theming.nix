@@ -1,6 +1,6 @@
 { lib, config, pkgs, ... }:
 let 
-	gruvboxplus = import /etc/nixos/modules/home-manager/themes/gruvboxplus.nix { inherit pkgs; };
+	gruvboxplus = import ./themes/gruvboxplus.nix { inherit pkgs; };
 in
 {
 gtk = {

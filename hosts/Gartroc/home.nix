@@ -9,6 +9,7 @@
   imports = [
   	../../modules/home-manager/git.nix
 	../../modules/home-manager/theming.nix
+	../../modules/home-manager/river.nix
   ];
 
   home.stateVersion = "24.05"; # Please read the comment before changing.
