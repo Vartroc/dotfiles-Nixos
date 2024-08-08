@@ -24,7 +24,7 @@ wayland.windowManager.river = {
 				"${mod} U" = ''spawn "rofi -show drun -show-icons"'';
 
 				"${mod} XF86AudioRaiseVolume" = ''spawn "amixer set Master 5%+"'';
-				"${mod} F11" = "spawn rofi";
+				"${mod} F12" = ''spawn "amixer set Master 5%-"'';
 
 				"Super+Shift E" = "exit";
     			};
