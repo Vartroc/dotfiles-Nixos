@@ -8,6 +8,7 @@
   
   imports = [
   	../../modules/home-manager/git.nix
+	../../modules/home-manager/theming.nix
   ];
 
   home.stateVersion = "24.05"; # Please read the comment before changing.
@@ -28,8 +29,9 @@ programs.rofi = {
 };
 #  wayland.windowManager.hyprland.enable = true;
 
-  home.packages = [
+  home.packages = with pkgs; [
 #    pkgs.hello
+	dolphin
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the

@@ -72,7 +72,7 @@ environment.systemPackages = with pkgs; [
 		hyperfine
 		btop
 
-		dolphin
+#		dolphin
 		libreoffice
 		vlc
 		yt-dlp
