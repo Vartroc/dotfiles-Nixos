@@ -80,9 +80,25 @@ environment.systemPackages = with pkgs; [
 		inkscape
 		discord
 #		niri
+
+		arc-theme
+		#kvantum
+		#kvantum-theme-arc
+		qt5ct
+		papirus-icon-theme
+#		breeze-cursors
 	];
 
-
+environment.variables = {
+	GTK_THEME = "Arc-Dark";
+    GTK_ICON_THEME = "Papirus";
+#    XCURSOR_THEME = "Breeze";
+    QT_QPA_PLATFORMTHEME = "qt5ct";
+    #QT_STYLE_OVERRIDE = "kvantum";
+    XDG_SESSION_TYPE = "wayland";
+    XDG_CURRENT_DESKTOP = "river";
+    MOZ_ENABLE_WAYLAND = "1";
+};
 
 
 
