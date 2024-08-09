@@ -8,9 +8,9 @@ inputs = {
 		inputs.nixpkgs.follows = "nixpkgs";
 	};
 
-	hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+#	hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 	nix-minecraft.url = "github:Infinidoge/nix-minecraft";
-	niri.url = "github:sodiboo/niri-flake";
+#	niri.url = "github:sodiboo/niri-flake";
 	stylix.url = "github:danth/stylix";
 };
 
@@ -28,7 +28,7 @@ outputs = { self, nixpkgs, ... }@inputs: {
             			home-manager.useUserPackages = true;
           		}
 			inputs.stylix.nixosModules.stylix
-			inputs.niri.nixosModules.niri
+#			inputs.niri.nixosModules.niri
 		];
     	};
 };
