@@ -79,9 +79,11 @@ environment.systemPackages = with pkgs; [
 #		openshot-qt # --sip-4.19.25 not supported for interpreter python3.12--
 		inkscape
 		discord
+		mpv
 #		niri
 
 		arc-theme
+#		arc-qt-theme
 		#kvantum
 		#kvantum-theme-arc
 		qt5ct
