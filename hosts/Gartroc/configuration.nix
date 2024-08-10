@@ -86,18 +86,25 @@ environment.systemPackages = with pkgs; [
 		#kvantum-theme-arc
 		qt5ct
 		papirus-icon-theme
+		adwaita-qt
 #		breeze-cursors
+#		libsForQt5.qtstyleplugin-kvantum
+#    		libsForQt5.qt5ct
+
 	];
 
 environment.variables = {
 	GTK_THEME = "Arc-Dark";
-    GTK_ICON_THEME = "Papirus";
+    	GTK_ICON_THEME = "Papirus";
+	QT_STYLE_OVERRIDE = "adwaita-dark";
 #    XCURSOR_THEME = "Breeze";
-    QT_QPA_PLATFORMTHEME = "qt5ct";
-    #QT_STYLE_OVERRIDE = "kvantum";
-    XDG_SESSION_TYPE = "wayland";
-    XDG_CURRENT_DESKTOP = "river";
-    MOZ_ENABLE_WAYLAND = "1";
+#    QT_QPA_PLATFORMTHEME = "qt5ct";
+#	QT_QPA_PLATFORMTHEME = "qt5ct";
+#    	QT_STYLE_OVERRIDE = "Arc-Dark";
+    	XDG_SESSION_TYPE = "wayland";
+    	XDG_CURRENT_DESKTOP = "river";
+    	XDG_SESSION_DESKTOP = "river";
+    	MOZ_ENABLE_WAYLAND = "1";
 };
 
 
