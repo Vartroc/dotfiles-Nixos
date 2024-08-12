@@ -30,7 +30,20 @@ outputs = { self, nixpkgs, ... }@inputs: {
 			inputs.stylix.nixosModules.stylix
 #			inputs.niri.nixosModules.niri
 		];
-    	};
+	};	
+	nixosConfigurations.Sartroc = nixpkgs.lib.nixosSystem {
+		specialArgs = {inherit inputs;};
+		modules = [
+        		./hosts/Sartroc/configuration.nix
+        		inputs.home-manager.nixosModules.default
+			{
+            			home-manager.useGlobalPkgs = true;
+            			home-manager.useUserPackages = true;
+          		}
+			inputs.stylix.nixosModules.stylix
+#			inputs.niri.nixosModules.niri
+    		];	
+	};
 };
 
 }
