@@ -16,6 +16,7 @@ imports = [
 	../../modules/nixos/bluetooth.nix
 	../../modules/nixos/users.nix
 	../../modules/nixos/gaming.nix
+	/etc/nixos/modules/home-manager/theming.nix
 ];
 home-manager = {
 	users = {
@@ -96,9 +97,9 @@ environment.systemPackages = with pkgs; [
 	];
 
 environment.variables = {
-	GTK_THEME = "Arc-Dark";
+	GTK_THEME = "Catppuccin-Mocha";
     	GTK_ICON_THEME = "Papirus";
-	QT_STYLE_OVERRIDE = "adwaita-dark";
+	QT_STYLE_OVERRIDE = "Catppuccin-Mocha";
 #    XCURSOR_THEME = "Breeze";
 #    QT_QPA_PLATFORMTHEME = "qt5ct";
 #	QT_QPA_PLATFORMTHEME = "qt5ct";
