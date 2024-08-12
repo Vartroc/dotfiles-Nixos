@@ -3,6 +3,7 @@
 environment.systemPackages = [
 	pkgs.catppuccin
 	pkgs.arc-theme
+	pkgs.arc-kde-theme
 ];
 home-manager.users."andi" = {
 	gtk = {
@@ -21,7 +22,7 @@ home-manager.users."andi" = {
     		enable = true;
     		platformTheme.name = "gtk";
     		style = {
-        		name = "Catppuccin";
+        		name = "Arc-Dark";
         		package = pkgs.catppuccin;
     		};
 	};
