@@ -87,7 +87,7 @@ environment.systemPackages = with pkgs; [
 #		arc-qt-theme
 		#kvantum
 		#kvantum-theme-arc
-		qt5ct
+		qt6ct
 		papirus-icon-theme
 		adwaita-qt
 #		breeze-cursors
@@ -99,7 +99,8 @@ environment.systemPackages = with pkgs; [
 environment.variables = {
 	GTK_THEME = "Arc-Dark";
     	GTK_ICON_THEME = "Papirus";
-	QT_STYLE_OVERRIDE = "Arc-Dark";
+	QT_QPA_PLATFORMTHEME = "qt6ct";
+#	QT_STYLE_OVERRIDE = "Arc-Dark";
 #    XCURSOR_THEME = "Breeze";
 #    QT_QPA_PLATFORMTHEME = "qt5ct";
 #	QT_QPA_PLATFORMTHEME = "qt5ct";
