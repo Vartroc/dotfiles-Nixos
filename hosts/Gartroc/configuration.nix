@@ -97,9 +97,9 @@ environment.systemPackages = with pkgs; [
 	];
 
 environment.variables = {
-	GTK_THEME = "Catppuccin-Mocha";
+	GTK_THEME = "Arc-Dark";
     	GTK_ICON_THEME = "Papirus";
-	QT_STYLE_OVERRIDE = "Catppuccin-Mocha";
+	QT_STYLE_OVERRIDE = "Catppuccin";
 #    XCURSOR_THEME = "Breeze";
 #    QT_QPA_PLATFORMTHEME = "qt5ct";
 #	QT_QPA_PLATFORMTHEME = "qt5ct";
