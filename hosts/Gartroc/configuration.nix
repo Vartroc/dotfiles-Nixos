@@ -77,22 +77,15 @@ environment.systemPackages = with pkgs; [
 		libreoffice
 		vlc
 		yt-dlp
-#		openshot-qt # --sip-4.19.25 not supported for interpreter python3.12--
 		inkscape
 		discord
 		mpv
-#		niri
-
+		obsidian
+		
 		arc-theme
-#		arc-qt-theme
-		#kvantum
-		#kvantum-theme-arc
 		qt6ct
 		papirus-icon-theme
 		adwaita-qt
-#		breeze-cursors
-#		libsForQt5.qtstyleplugin-kvantum
-#    		libsForQt5.qt5ct
 
 	];
 
