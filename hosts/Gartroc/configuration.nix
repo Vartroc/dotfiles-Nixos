@@ -16,7 +16,7 @@ imports = [
 	../../modules/nixos/bluetooth.nix
 	../../modules/nixos/users.nix
 	../../modules/nixos/gaming.nix
-	/etc/nixos/modules/home-manager/theming.nix
+	../../modules/home-manager/theming.nix
 ];
 home-manager = {
 	users = {
@@ -96,7 +96,7 @@ environment.systemPackages = with pkgs; [
 
 	];
 
-environment.variables = {
+/*environment.variables = {
 	GTK_THEME = "Arc-Dark";
     	GTK_ICON_THEME = "Papirus";
 	QT_STYLE_OVERRIDE = "adwaita-dark";
@@ -110,7 +110,7 @@ environment.variables = {
     	XDG_SESSION_DESKTOP = "river";
     	MOZ_ENABLE_WAYLAND = "1";
 };
-
+*/
 
 
 

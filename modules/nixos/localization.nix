@@ -10,7 +10,7 @@ config = lib.mkIf config.localization.enable {
 		keyMap = "de";
 	};
 
-	services.xserver = {
+	services.xserver.xkb = {
 		layout = "de";
 	};
 };

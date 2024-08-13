@@ -12,6 +12,7 @@ config = lib.mkIf config.bash.aliases.enable {
   		ls = "ls --color=tty";
   		rebuild = "/etc/nixos/modules/scripts/rebuild.sh";
   		configurate = "sudo nvim /etc/nixos/hosts/Gartroc/configuration.nix";
+		hmconfigurate = "sudo nvim /etc/nixos/hosts/Gartroc/home.nix";
 		nixmodules = "sudo nvim /etc/nixos/modules/nixos/";
 		hmmodules = "sudo nvim /etc/nixos/modules/home-manager/";
 		modules = "sudo nvim /etc/nixos/moduels/";

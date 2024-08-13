@@ -7,7 +7,7 @@ inputs = {
 		url = "github:nix-community/home-manager";
 		inputs.nixpkgs.follows = "nixpkgs";
 	};
-
+	catppuccin.url = "github:catppuccin/nix";
 #	hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 	nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 #	niri.url = "github:sodiboo/niri-flake";
@@ -28,6 +28,7 @@ outputs = { self, nixpkgs, ... }@inputs: {
             			home-manager.useUserPackages = true;
           		}
 			inputs.stylix.nixosModules.stylix
+			inputs.catppuccin.nixosModules.catppuccin
 #			inputs.niri.nixosModules.niri
 		];
 	};	
