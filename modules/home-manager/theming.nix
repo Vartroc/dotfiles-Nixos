@@ -6,7 +6,7 @@ environment.variables = {
       CLUTTER_BACKEND = "wayland";
 
       QT_QPA_PLATFORM = "wayland";
-      QT_QPA_PLATFORMTHEME = "qt6ct";
+      QT_QPA_PLATFORMTHEME = "gtk2";
       QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
 
       XDG_CURRENT_DESKTOP = "river";
