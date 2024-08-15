@@ -21,6 +21,7 @@ config = lib.mkIf config.essential-packages.enable {
 		lolcat
 		firefox
 		alacritty
+		kitty
 #		rofi-wayland
 	];
 };
