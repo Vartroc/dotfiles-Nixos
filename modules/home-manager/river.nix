@@ -40,6 +40,7 @@ wayland.windowManager.river = {
 		set-cursor-warp = "on-output-change";
 		border-color-focused = "0xb4befe";
 		border-color-unfocused = "0x1e1e2e";
+		background-color = "0x1e1e2e";
 	};
 
 	extraConfig = ''
