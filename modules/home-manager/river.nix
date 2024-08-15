@@ -37,6 +37,9 @@ wayland.windowManager.river = {
   		};
 		keyboard-layout = "de";
 		focus-follows-cursor = "always";
+		set-cursor-warp = "on-output-change";
+		border-color-focused = "0xb4befe";
+		border-color-unfocused = "0x1e1e2e";
 	};
 
 	extraConfig = ''
