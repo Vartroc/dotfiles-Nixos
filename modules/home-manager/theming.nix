@@ -1,18 +1,19 @@
 { lib, inputs, pkgs, config, ... }:
 {
-environment.variables = {
+/*environment.variables = {
       GDK_BACKEND = "wayland";
       SDL_VIDEODRIVER = "wayland";
       CLUTTER_BACKEND = "wayland";
 
       QT_QPA_PLATFORM = "wayland";
       QT_QPA_PLATFORMTHEME = "qt6ct";
+      QT_STYLE_OVERRIDE = "kvantum";
       QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
 
       XDG_CURRENT_DESKTOP = "river";
       XDG_SESSION_TYPE = "wayland";
       XDG_SESSION_DESKTOP = "river";
-};
+};*/
 home-manager.users."andi" = {
   imports = [ inputs.catppuccin.homeManagerModules.catppuccin ];
 
