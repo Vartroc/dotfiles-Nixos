@@ -7,7 +7,7 @@ environment.variables = {
 
       QT_QPA_PLATFORM = "wayland";
       QT_QPA_PLATFORMTHEME = "qt6ct";
-#      QT_STYLE_OVERRIDE = "kvantum";
+      QT_STYLE_OVERRIDE = "kvantum";
       QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
 
       XDG_CURRENT_DESKTOP = "river";
