@@ -1,6 +1,6 @@
 { lib, inputs, pkgs, config, ... }:
 {
-/*environment.variables = {
+environment.variables = {
       GDK_BACKEND = "wayland";
       SDL_VIDEODRIVER = "wayland";
       CLUTTER_BACKEND = "wayland";
@@ -13,7 +13,7 @@
       XDG_CURRENT_DESKTOP = "river";
       XDG_SESSION_TYPE = "wayland";
       XDG_SESSION_DESKTOP = "river";
-};*/
+};
 home-manager.users."andi" = {
   imports = [ inputs.catppuccin.homeManagerModules.catppuccin ];
 
