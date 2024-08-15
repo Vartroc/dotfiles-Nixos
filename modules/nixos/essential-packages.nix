@@ -20,7 +20,6 @@ config = lib.mkIf config.essential-packages.enable {
 		figlet
 		lolcat
 		firefox
-		kitty
 		alacritty
 #		rofi-wayland
 	];

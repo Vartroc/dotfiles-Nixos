@@ -10,7 +10,7 @@
   	../../modules/home-manager/git.nix
 	../../modules/home-manager/river.nix
 	../../modules/home-manager/qutebrowser.nix
-#	/etc/nixos/modules/home-manager/kitty.nix 
+	../../modules/home-manager/kitty.nix 
   ];
 
   home.stateVersion = "24.05"; # Please read the comment before changing.
