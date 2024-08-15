@@ -31,6 +31,8 @@ wayland.windowManager.river = {
 				"${mod} XF86AudioRaiseVolume" = ''spawn "amixer set Master 5%+"'';
 				"${mod} F12" = ''spawn "amixer set Master 5%-"'';
 				"${mod} F11" = ''spawn "amixer set Master toggle"'';
+				
+				"${mod}+Shift U" = ''spawn "notify-send '$(date +%H):$(date +%M) Uhr'"'';	
 
 				"Super+Shift E" = "exit";
     			};
