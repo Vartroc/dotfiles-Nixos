@@ -63,7 +63,7 @@ environment.systemPackages = with pkgs; [
 
 		firefox
 		pavucontrol
-		easyeffects
+#		easyeffects
 	
 		bottles
 		wine
