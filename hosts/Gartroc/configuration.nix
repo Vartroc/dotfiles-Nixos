@@ -18,7 +18,7 @@ imports = [
 	../../modules/nixos/gaming.nix
 	../../modules/home-manager/theming.nix
 	../../modules/home-manager/river.nix
-
+	../../modules/nixos/fonts.nix
 ];
 home-manager = {
 	users = {
