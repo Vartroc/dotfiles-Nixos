@@ -12,6 +12,8 @@ inputs = {
 	nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 #	niri.url = "github:sodiboo/niri-flake";
 	stylix.url = "github:danth/stylix";
+	owm.url = "github:justinlovinger/owm";
+
 };
 
 	
