@@ -8,7 +8,6 @@
   
   imports = [
   	../../modules/home-manager/git.nix
-	../../modules/home-manager/river.nix
 	../../modules/home-manager/qutebrowser.nix
 	../../modules/home-manager/kitty.nix 
   ];

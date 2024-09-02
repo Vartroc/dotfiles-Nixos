@@ -17,6 +17,8 @@ imports = [
 	../../modules/nixos/users.nix
 	../../modules/nixos/gaming.nix
 	../../modules/home-manager/theming.nix
+	../../modules/home-manager/river.nix
+
 ];
 home-manager = {
 	users = {
@@ -51,9 +53,7 @@ programs = {
 nix.settings.experimental-features = [ "nix-command" "flakes" ];
 nixpkgs.config.allowUnfree = true;
 networking.firewall.enable = false;
-
 environment.systemPackages = with pkgs; [
-			
 		waybar
 		networkmanagerapplet
 		swww
@@ -99,8 +99,6 @@ environment.systemPackages = with pkgs; [
 #	QT_QPA_PLATFORMTHEME = "qt5ct";
 #    	QT_STYLE_OVERRIDE = "Arc-Dark";
     	XDG_SESSION_TYPE = "wayland";
-    	XDG_CURRENT_DESKTOP = "river";
-    	XDG_SESSION_DESKTOP = "river";
     	MOZ_ENABLE_WAYLAND = "1";
 };
 */

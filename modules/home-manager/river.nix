@@ -1,8 +1,13 @@
-{ pkgs, lib, config, ... }:
+{ pkgs, lib, config, inputs, ... }:
 let
 	mod = "Super";
 in
 {
+
+environment.systemPackages = [ inputs.owm.defaultPackage.${pkgs.system} ];
+
+
+home-manager.users."andi" = {
 wayland.windowManager.river = {
 	enable = true;
 	settings = {
@@ -67,4 +72,5 @@ wayland.windowManager.river = {
 		rivertile -view-padding 2 -outer-padding 2 &
 		'';
 	};
+};
 }
