@@ -42,7 +42,7 @@ bluetooth-module.enable = true;
 andi.enable = true;
 gaming.enable = true;
 programs = {
-	hyprland.enable = true;
+	hyprland.enable = false;
 	neovim.enable = true;
 	mtr.enable = true;
 	gnupg.agent.enable = true;
@@ -50,6 +50,7 @@ programs = {
 };
 
 # Missalanious
+programs.dconf.enable = true;
 nix.settings.experimental-features = [ "nix-command" "flakes" ];
 nixpkgs.config.allowUnfree = true;
 networking.firewall.enable = false;
