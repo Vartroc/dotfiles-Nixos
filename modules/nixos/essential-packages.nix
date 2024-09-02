@@ -15,7 +15,6 @@ config = lib.mkIf config.essential-packages.enable {
 		yazi
 		zip
 		unzip
-		alsa-utils
 
 		figlet
 		lolcat

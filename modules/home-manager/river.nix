@@ -4,7 +4,10 @@ let
 in
 {
 
-environment.systemPackages = [ inputs.owm.defaultPackage.${pkgs.system} ];
+environment.systemPackages = [ 
+	inputs.owm.defaultPackage.${pkgs.system}
+	pkgs.alsa-utils
+];
 
 
 home-manager.users."andi" = {
