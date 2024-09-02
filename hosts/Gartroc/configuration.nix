@@ -79,10 +79,11 @@ environment.systemPackages = with pkgs; [
 		vlc
 		yt-dlp
 		inkscape
-		discord
 		mpv
 		obsidian
+		vesktop
 
+		gimp
 		uwuify		
 		arc-theme
 		qt6ct
