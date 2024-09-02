@@ -50,6 +50,7 @@ programs = {
 };
 
 # Missalanious
+services.fwupd.enable = true;
 programs.dconf.enable = true;
 nix.settings.experimental-features = [ "nix-command" "flakes" ];
 nixpkgs.config.allowUnfree = true;
