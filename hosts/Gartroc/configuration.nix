@@ -82,7 +82,8 @@ environment.systemPackages = with pkgs; [
 		discord
 		mpv
 		obsidian
-		
+
+		uwuify		
 		arc-theme
 		qt6ct
 		papirus-icon-theme
