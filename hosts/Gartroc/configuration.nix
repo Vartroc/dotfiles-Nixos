@@ -62,6 +62,7 @@ environment.systemPackages = with pkgs; [
 		wf-recorder
 
 		firefox
+		signal-desktop
 		pavucontrol
 #		easyeffects
 	
