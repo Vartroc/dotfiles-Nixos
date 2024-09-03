@@ -15,11 +15,12 @@ config = lib.mkIf config.essential-packages.enable {
 		yazi
 		zip
 		unzip
+		ripgrep	
+
 
 		figlet
 		lolcat
 		firefox
-		alacritty
 		kitty
 #		rofi-wayland
 	];
