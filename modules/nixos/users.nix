@@ -6,7 +6,7 @@ options = {
 config = lib.mkIf config.andi.enable {
 	users.users.andi = {
   		isNormalUser = true;
-  		extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+  		extraGroups = [ "wheel" "input" ]; # Enable ‘sudo’ for the user.
 		initialPassword = "password";	
   	};
 };
