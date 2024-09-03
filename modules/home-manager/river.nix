@@ -5,7 +5,6 @@ in
 {
 
 environment.systemPackages = [ 
-	inputs.owm.defaultPackage.${pkgs.system}
 	pkgs.alsa-utils
 	pkgs.way-displays
 ];
@@ -52,7 +51,7 @@ wayland.windowManager.river = {
 		border-color-focused = "0xb4befe";
 		border-color-unfocused = "0x11111b";
 		background-color = "0x1e1e2e";
-		default-layout = "owm";
+		default-layout = "rivertile";
 
 	};
 
@@ -73,8 +72,7 @@ wayland.windowManager.river = {
     			# mod+Shift+Control+[1-9] to toggle tag [0-8] of focused view
     			riverctl map normal ${mod}+Shift+Control $i toggle-view-tags $tags
 		done
-		
-		owm &
+			rivertile -view-padding 3 -outer-padding 3 &
 		'';
 	};
 };
