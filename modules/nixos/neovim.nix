@@ -7,6 +7,7 @@ programs.neovim = {
 environment.systemPackages = with pkgs; [
 	ripgrep
 	gcc
-
+	tree-sitter
+	fd
 ];
 }
