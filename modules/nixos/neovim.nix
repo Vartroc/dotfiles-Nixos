@@ -10,5 +10,7 @@ environment.systemPackages = with pkgs; [
 	tree-sitter
 	fd
 	python3
+	gnumake
+	luarocks-nix
 ];
 }
