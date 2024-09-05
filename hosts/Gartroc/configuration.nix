@@ -19,6 +19,7 @@ imports = [
 	../../modules/home-manager/theming.nix
 	../../modules/home-manager/river.nix
 	../../modules/nixos/fonts.nix
+	../../modules/nixos/neovim.nix
 ];
 home-manager = {
 	users = {
@@ -43,8 +44,6 @@ andi.enable = true;
 gaming.enable = true;
 programs = {
 	hyprland.enable = false;
-	neovim.enable = true;
-	neovim.defaultEditor = true;
 	mtr.enable = true;
 	gnupg.agent.enable = true;
 	kdeconnect.enable = true;
