@@ -44,6 +44,7 @@ gaming.enable = true;
 programs = {
 	hyprland.enable = false;
 	neovim.enable = true;
+	neovim.defaultEditor = true;
 	mtr.enable = true;
 	gnupg.agent.enable = true;
 	kdeconnect.enable = true;
