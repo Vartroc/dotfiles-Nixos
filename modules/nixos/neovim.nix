@@ -9,5 +9,6 @@ environment.systemPackages = with pkgs; [
 	gcc
 	tree-sitter
 	fd
+	python3
 ];
 }
