@@ -9,6 +9,10 @@ inputs = {
 	};
 	catppuccin.url = "github:catppuccin/nix";
 #	hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+	nixvim = {
+    		url = "github:nix-community/nixvim";
+    		inputs.nixpkgs.follows = "nixpkgs";
+  	};
 	nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 #	niri.url = "github:sodiboo/niri-flake";
 	stylix.url = "github:danth/stylix";
