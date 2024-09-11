@@ -8,16 +8,12 @@ inputs = {
 		inputs.nixpkgs.follows = "nixpkgs";
 	};
 	catppuccin.url = "github:catppuccin/nix";
-#	hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 	nixvim = {
     		url = "github:nix-community/nixvim";
     		inputs.nixpkgs.follows = "nixpkgs";
   	};
 	nix-minecraft.url = "github:Infinidoge/nix-minecraft";
-#	niri.url = "github:sodiboo/niri-flake";
 	stylix.url = "github:danth/stylix";
-	owm.url = "github:justinlovinger/owm";
-
 };
 
 	
@@ -35,7 +31,7 @@ outputs = { self, nixpkgs, ... }@inputs: {
           		}
 			inputs.stylix.nixosModules.stylix
 			inputs.catppuccin.nixosModules.catppuccin
-#			inputs.niri.nixosModules.niri
+			inputs.nixvim.nixosModules.nixvim
 		];
 	};	
 	nixosConfigurations.Sartroc = nixpkgs.lib.nixosSystem {
