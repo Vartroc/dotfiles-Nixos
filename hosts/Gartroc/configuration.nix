@@ -20,7 +20,7 @@ imports = [
 	../../modules/home-manager/river.nix
 	../../modules/nixos/fonts.nix
 	../../modules/nixos/neovim.nix
-	/etc/nixos/modules/nixvim/nixvim.nix
+#	/etc/nixos/modules/nixvim/nixvim.nix
 ];
 home-manager = {
 	users = {

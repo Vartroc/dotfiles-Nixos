@@ -41,8 +41,7 @@ wayland.windowManager.river = {
 				"${mod} F11" = ''spawn "amixer set Master toggle"'';
 				
 				"${mod}+Shift U" = ''spawn 'notify-send "$(date +%H):$(date +%M) Uhr"' '';	
-				"${mod} P" = '' spawn 'grim -g "$(slurp -w 0)" ~/Screenshots/"$(date)".png' '';
-
+				"${mod} P" = '' test=$(slurp) && grim -g "$test" - | wl-copy && grim -g "$test" ~/Screenshots/"$(date)".png '';
 				"Super+Shift E" = "exit";
     			};
   		};
