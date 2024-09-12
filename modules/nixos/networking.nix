@@ -6,6 +6,6 @@ options = {
 config = lib.mkIf config.networking-custom.enable {
 	networking.hostName = "Gartroc";
 	networking.hostId = "afcefed7";
-	networking.networkmanager.enable = true;
+#	networking.networkmanager.enable = true;
 };
 }

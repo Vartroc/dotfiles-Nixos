@@ -19,8 +19,8 @@ imports = [
 	../../modules/home-manager/theming.nix
 	../../modules/home-manager/river.nix
 	../../modules/nixos/fonts.nix
-	../../modules/nixos/neovim.nix
-#	/etc/nixos/modules/nixvim/nixvim.nix
+#	../../modules/nixos/neovim.nix
+	../../modules/nixvim/nixvim.nix
 ];
 home-manager = {
 	users = {
