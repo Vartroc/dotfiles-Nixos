@@ -1,7 +1,7 @@
 { config, ... }:
 {
 programs.nixvim = {
-    options = {
+    opts = {
 	number = true;
 	shiftwidth = 4;
 	relativenumber = true;
