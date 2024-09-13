@@ -44,7 +44,7 @@ outputs = { self, nixpkgs, ... }@inputs: {
             			home-manager.useUserPackages = true;
           		}
 			inputs.stylix.nixosModules.stylix
-			inputs.nixvim.nixosModules.nixvim
+#			inputs.nixvim.homeManagerModules.nixvim
     		];	
 	};
 };

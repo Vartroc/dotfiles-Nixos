@@ -3,8 +3,6 @@
 {
 imports = [
 	./hardware-configuration.nix
-#	../../modules/nixos/swww.nix
-# 	inputs.home-manager.nixosModules.default
 	../../modules/nixos/greetd.nix
 	../../modules/nixos/boot.nix
 	../../modules/nixos/networking.nix

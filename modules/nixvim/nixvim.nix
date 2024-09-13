@@ -5,6 +5,7 @@ imports = [
 	./options.nix
 ];
 
+
 programs.nixvim = {
 	enable = true;
 	colorschemes.catppuccin = {

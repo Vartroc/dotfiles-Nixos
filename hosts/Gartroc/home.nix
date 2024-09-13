@@ -10,6 +10,7 @@
   	../../modules/home-manager/git.nix
 	../../modules/home-manager/qutebrowser.nix
 	../../modules/home-manager/kitty.nix 
+#	../../modules/nixvim/nixvim.nix
   ];
 
   home.stateVersion = "24.05"; # Please read the comment before changing.

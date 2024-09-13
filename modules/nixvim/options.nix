@@ -8,7 +8,10 @@ programs.nixvim = {
 	termguicolors = true;
     };
     
-    clipboard.register = "unnamedplus";
+    clipboard = {
+	register = "unnamedplus";
+	providers.wl-copy.enable = true;
+    };
     globals.mapleader = " ";
 };
 }
