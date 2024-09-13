@@ -19,7 +19,7 @@ imports = [
 	../../modules/home-manager/theming.nix
 	../../modules/home-manager/river.nix
 	../../modules/nixos/fonts.nix
-#	../../modules/nixos/neovim.nix
+	../../modules/nixos/neovim.nix
 	../../modules/nixvim/nixvim.nix
 ];
 home-manager = {
