@@ -92,7 +92,7 @@ environment.systemPackages = with pkgs; [
 		qt6ct
 		papirus-icon-theme
 		adwaita-qt
-
+		ktouch
 	];
 
 /*environment.variables = {

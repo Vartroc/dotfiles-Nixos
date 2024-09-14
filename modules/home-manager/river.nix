@@ -1,6 +1,12 @@
 { pkgs, lib, config, inputs, ... }:
 let
-	mod = "Super";
+  mod = "Super";
+ 
+# custom keyboard
+ keyboardLayoutFile = pkgs.fetchurl {
+    url = "https://dl.neo-layout.org/mine";
+    sha256 = "sha256-9zx3Iei4uSUZahlBhtgsuWI0BKMbr8ukVC4PQBlqoyw="; # Replace with the actual sha256 checksum
+  };
 in
 {
 
@@ -13,6 +19,7 @@ environment.systemPackages = [
 home-manager.users."andi" = {
 wayland.windowManager.river = {
 	enable = true;
+	xwayland.enable = true;
 	settings = {
   		map = {
     			normal = {
@@ -45,7 +52,6 @@ wayland.windowManager.river = {
 				"Super+Shift E" = "exit";
     			};
   		};
-		keyboard-layout = "de";
 		focus-follows-cursor = "always";
 		set-cursor-warp = "on-focus-change";
 		border-color-focused = "0xb4befe";
@@ -72,6 +78,7 @@ wayland.windowManager.river = {
     			# mod+Shift+Control+[1-9] to toggle tag [0-8] of focused view
     			riverctl map normal ${mod}+Shift+Control $i toggle-view-tags $tags
 		done
+		riverctl keyboard-layout mine
 
 		way-displays > /tmp/way-displays.''${XDG_VTNR}.''${USER}.log 2>&1 &	
 		rivertile -view-padding 3 -outer-padding 3 &
@@ -79,5 +86,8 @@ wayland.windowManager.river = {
 
 		'';
 	};
-};
+      home.file = {
+	".config/river/mine".source = keyboardLayoutFile;
+      };
+  };
 }
