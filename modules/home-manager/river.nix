@@ -78,7 +78,7 @@ wayland.windowManager.river = {
     			# mod+Shift+Control+[1-9] to toggle tag [0-8] of focused view
     			riverctl map normal ${mod}+Shift+Control $i toggle-view-tags $tags
 		done
-		riverctl keyboard-layout mine
+		  riverctl keyboard-layout de
 
 		way-displays > /tmp/way-displays.''${XDG_VTNR}.''${USER}.log 2>&1 &	
 		rivertile -view-padding 3 -outer-padding 3 &
