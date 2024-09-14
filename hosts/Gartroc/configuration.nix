@@ -19,6 +19,7 @@ imports = [
 	../../modules/nixos/fonts.nix
 	../../modules/nixos/neovim.nix
 	../../modules/nixvim/nixvim.nix
+	../../modules/nixos/keyboard.nix
 ];
 home-manager = {
 	users = {

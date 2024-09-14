@@ -2,7 +2,7 @@
 {
 imports = [
     ./vimtex.nix
-#    ./telekasten.nix
+    ./telekasten.nix
     ./telescope.nix
 ];
 }

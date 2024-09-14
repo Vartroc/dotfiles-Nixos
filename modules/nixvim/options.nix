@@ -3,7 +3,7 @@
 programs.nixvim = {
     opts = {
 	number = true;
-	shiftwidth = 4;
+	shiftwidth = 2;
 	relativenumber = true;
 	termguicolors = true;
     };

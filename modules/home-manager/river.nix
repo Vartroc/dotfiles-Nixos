@@ -45,7 +45,7 @@ wayland.windowManager.river = {
 				"Super+Shift E" = "exit";
     			};
   		};
-		keyboard-layout = "de";
+#		keyboard-layout = "de";
 		focus-follows-cursor = "always";
 		set-cursor-warp = "on-focus-change";
 		border-color-focused = "0xb4befe";
