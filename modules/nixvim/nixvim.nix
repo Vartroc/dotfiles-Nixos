@@ -3,6 +3,7 @@
 imports = [
 	./plugins/default.nix
 	./options.nix
+	./keybinds.nix
 ];
 
 

@@ -24,31 +24,31 @@ wayland.windowManager.river = {
   		map = {
     			normal = {
       				"${mod} C" = "close";
-				"${mod} I" = "spawn kitty";
-				"${mod} O" = "spawn firefox";
+				"${mod} L" = "spawn kitty";
+				"${mod} M" = "spawn firefox";
 
-				"${mod} J" = "focus-view next";
-				"${mod} K" = "focus-view previous";
+				"${mod} N" = "focus-view next";
+				"${mod} R" = "focus-view previous";
 			
-				"${mod}+Shift J" = "swap next";
-				"${mod}+Shift K" = "swap previous";
+				"${mod}+Shift N" = "swap next";
+				"${mod}+Shift R" = "swap previous";
 
-				"${mod} L" = ''send-layout-cmd rivertile "main-ratio +0.01"'';
-				"${mod} H" = ''send-layout-cmd rivertile "main-ratio -0.01"'';
+				"${mod} S" = ''send-layout-cmd rivertile "main-ratio +0.01"'';
+				"${mod} B" = ''send-layout-cmd rivertile "main-ratio -0.01"'';
 
-				"${mod}+Shift L" = ''send-layout-cmd rivertile "main-ratio +0.07"'';
-				"${mod}+Shift H" = ''send-layout-cmd rivertile "main-ratio -0.07"'';
+				"${mod}+Shift S" = ''send-layout-cmd rivertile "main-ratio +0.07"'';
+				"${mod}+Shift B" = ''send-layout-cmd rivertile "main-ratio -0.07"'';
 				
 				# Application Starter Rofi
-				"${mod} U" = ''spawn "rofi -show drun -show-icons"'';
+				"${mod} H" = ''spawn "rofi -show drun -show-icons"'';
 
 				# Sound control, requires amixer
 				"${mod} XF86AudioRaiseVolume" = ''spawn "amixer set Master 5%+"'';
 				"${mod} F12" = ''spawn "amixer set Master 5%-"'';
 				"${mod} F11" = ''spawn "amixer set Master toggle"'';
 				
-				"${mod}+Shift U" = ''spawn 'notify-send "$(date +%H):$(date +%M) Uhr"' '';	
-				"${mod} P" = '' spawn 'test=$(slurp) && grim -g "$test" - | wl-copy && grim -g "$test" ~/Screenshots/"$(date)".png' '';
+				"${mod}+Shift H" = ''spawn 'notify-send "$(date +%H):$(date +%M) Uhr"' '';	
+				"${mod} W" = '' spawn 'test=$(slurp) && grim -g "$test" - | wl-copy && grim -g "$test" ~/Screenshots/"$(date)".png' '';
 				"Super+Shift E" = "exit";
     			};
   		};
@@ -58,6 +58,7 @@ wayland.windowManager.river = {
 		border-color-unfocused = "0x11111b";
 		background-color = "0x1e1e2e";
 		default-layout = "rivertile";
+		keyboard-layout = ''"de(bone)"'';
 
 	};
 
@@ -78,7 +79,6 @@ wayland.windowManager.river = {
     			# mod+Shift+Control+[1-9] to toggle tag [0-8] of focused view
     			riverctl map normal ${mod}+Shift+Control $i toggle-view-tags $tags
 		done
-		  riverctl keyboard-layout de
 
 		way-displays > /tmp/way-displays.''${XDG_VTNR}.''${USER}.log 2>&1 &	
 		rivertile -view-padding 3 -outer-padding 3 &
