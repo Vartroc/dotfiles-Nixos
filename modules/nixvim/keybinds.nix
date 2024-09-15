@@ -1,6 +1,6 @@
 { ... }:
 {
-programs.nixvim.opts.keymaps = [
+programs.nixvim.keymaps = [
   {
     action = "h";
     key = "b";
