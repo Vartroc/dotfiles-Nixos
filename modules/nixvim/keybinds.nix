@@ -4,47 +4,47 @@ programs.nixvim.keymaps = [
   {
     action = "h";
     key = "b";
-    options.noremap = true;
+    options.remap = true;
   }
   {
     action = "j";
     key = "n";
-    options.noremap = true;
+    options.remap = true;
   }
   {
     action = "k";
     key = "r";
-    options.noremap = true;
+    options.remap = true;
   }
   {
     action = "l";
     key = "s";
-    options.noremap = true;
+    options.remap = true;
   }
   {
     action = "b";
     key = "ä";
-    options.noremap = true;
+    options.remap = true;
   }
   {
     action = "n";
     key = "ö";
-    options.noremap = true;
+    options.remap = true;
   }
   {
     action = "r";
     key = "ü";
-    options.noremap = true;
+    options.remap = true;
   }
   {
     action = "R";
     key = "Ü";
-    options.noremap = true;
+    options.remap = true;
   }
   {
     action = "l";
     key = "ß";
-    options.noremap = true;
+    options.remap = true;
   }
 ];
 }
