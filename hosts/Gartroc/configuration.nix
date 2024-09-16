@@ -27,7 +27,8 @@ home-manager = {
 	};
 };
 
-greetd.enable = false;
+greetd.enable = true;
+greetd.command = "river";
 getty.enable = true;
 bootloader = {
 	grub.enable = true;

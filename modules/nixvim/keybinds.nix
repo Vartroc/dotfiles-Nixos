@@ -37,6 +37,11 @@ programs.nixvim.keymaps = [
     options.noremap = true;
   }
   {
+    action = "R";
+    key = "Ü";
+    options.noremap = true;
+  }
+  {
     action = "l";
     key = "ß";
     options.noremap = true;
