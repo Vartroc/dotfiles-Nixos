@@ -4,22 +4,22 @@ programs.nixvim.keymaps = [
   {
     action = "h";
     key = "b";
-    options.noremap = true;
+    options.remap = true;
   }
   {
     action = "j";
     key = "n";
-    options.noremap = true;
+    options.remap = true;
   }
   {
     action = "k";
     key = "r";
-    options.noremap = true;
+    options.remap = true;
   }
   {
     action = "l";
     key = "s";
-    options.noremap = true;
+    options.remap = true;
   }
   {
     action = "b";
@@ -39,6 +39,11 @@ programs.nixvim.keymaps = [
   {
     action = "R";
     key = "Ü";
+    options.noremap = true;
+  }
+  {
+    action = "<C-r>";
+    key = "<C-Ü>";
     options.noremap = true;
   }
   {
