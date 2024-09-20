@@ -1,4 +1,4 @@
-{ config, inputs, lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
 imports = [
@@ -94,6 +94,8 @@ environment.systemPackages = with pkgs; [
 		papirus-icon-theme
 		adwaita-qt
 		anki
+		python312Packages.pyqt6
+		texliveFull
 	];
 
 /*environment.variables = {

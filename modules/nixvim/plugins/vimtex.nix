@@ -15,6 +15,5 @@ vim.g.vimtex_mainfile = 0
 environment.systemPackages = with pkgs; [
     zathura
     biber
-    texliveFull
 ];
 }

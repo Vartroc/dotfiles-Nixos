@@ -1,4 +1,4 @@
-{ lib, config, pkgs, inputs, ... }:
+{ lib, config, pkgs, ... }:
 {
 options = {
 	gaming.enable = lib.mkEnableOption "Gaming support";
@@ -16,6 +16,11 @@ config = lib.mkIf config.gaming.enable {
 		osu-lazer
 		mangohud
 		protonup
+
+		ddnet
+		mindustry
+		superTux
+		superTuxKart
 	];
 
 	environment.sessionVariables = {
