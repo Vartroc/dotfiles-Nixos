@@ -80,7 +80,6 @@ wayland.windowManager.river = {
     			riverctl map normal ${mod}+Shift+Control $i toggle-view-tags $tags
 		done
 
-		way-displays > /tmp/way-displays.''${XDG_VTNR}.''${USER}.log 2>&1 &	
 		rivertile -view-padding 3 -outer-padding 3 &
 		
 
