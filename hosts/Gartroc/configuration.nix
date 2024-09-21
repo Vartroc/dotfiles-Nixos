@@ -21,6 +21,8 @@ imports = [
 	../../modules/nixos/ollama.nix
 	../../modules/nixos/direnv.nix
 	../../modules/home-manager/zsh.nix
+	../../modules/nixos/flexing.nix
+	../../modules/nixos/no-shutdown.nix
 ];
 home-manager = {
 	users = {
@@ -96,6 +98,7 @@ environment.systemPackages = with pkgs; [
 		anki
 		python312Packages.pyqt6
 		texliveFull
+		youtube-music
 	];
 
 

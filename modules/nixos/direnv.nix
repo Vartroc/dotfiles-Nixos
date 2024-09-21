@@ -1,7 +1,9 @@
 { pkgs, ... }: {
-  #set to default values
+environment.systemPackages = with pkgs; [
+  direnv
+];
   programs.direnv = {
-    package = pkgs.direnv;
+  #  package = pkgs.direnv;
     silent = false;
     loadInNixShell = true;
     direnvrcExtra = "";

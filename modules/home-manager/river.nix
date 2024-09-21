@@ -4,7 +4,7 @@ let
 in
 {
 
-xdg = {
+/*xdg = {
 	portal = {
 		enable = true;
 		xdgOpenUsePortal = true;
@@ -12,7 +12,7 @@ xdg = {
 			pkgs.xdg-desktop-portal-gtk
 		];
 	};
-};
+};*/
 
 environment.systemPackages = [ 
 	pkgs.alsa-utils
