@@ -1,18 +1,22 @@
 { pkgs, lib, config, inputs, ... }:
 let
   mod = "Super";
- 
-# custom keyboard
- keyboardLayoutFile = pkgs.fetchurl {
-    url = "https://dl.neo-layout.org/mine";
-    sha256 = "sha256-9zx3Iei4uSUZahlBhtgsuWI0BKMbr8ukVC4PQBlqoyw="; # Replace with the actual sha256 checksum
-  };
 in
 {
 
+xdg = {
+	portal = {
+		enable = true;
+		xdgOpenUsePortal = true;
+		extraPortals = [
+			pkgs.xdg-desktop-portal-gtk
+		];
+	};
+};
+
 environment.systemPackages = [ 
 	pkgs.alsa-utils
-	pkgs.way-displays
+	pkgs.xdg-desktop-portal-gtk
 ];
 
 
@@ -85,8 +89,5 @@ wayland.windowManager.river = {
 
 		'';
 	};
-      home.file = {
-	".config/river/mine".source = keyboardLayoutFile;
-      };
   };
 }

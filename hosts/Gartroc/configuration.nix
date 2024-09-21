@@ -7,7 +7,6 @@ imports = [
 	../../modules/nixos/boot.nix
 	../../modules/nixos/networking.nix
 	../../modules/nixos/localization.nix
-	../../modules/nixos/bash.nix
 	../../modules/nixos/nix-minecraft.nix
 	../../modules/nixos/essential-packages.nix
 	../../modules/nixos/sound.nix
@@ -19,7 +18,9 @@ imports = [
 	../../modules/nixos/fonts.nix
 	../../modules/nixos/neovim.nix
 	../../modules/nixvim/nixvim.nix
-	../../modules/nixos/keyboard.nix
+	../../modules/nixos/ollama.nix
+	../../modules/nixos/direnv.nix
+	../../modules/home-manager/zsh.nix
 ];
 home-manager = {
 	users = {
@@ -37,7 +38,6 @@ bootloader = {
 networking-custom.enable = true;
 localization.enable = true;
 services.printing.enable = true;
-bash.aliases.enable = true;
 essential-packages.enable = true;
 sound-module.enable = true;
 bluetooth-module.enable = true;
@@ -97,22 +97,6 @@ environment.systemPackages = with pkgs; [
 		python312Packages.pyqt6
 		texliveFull
 	];
-
-/*environment.variables = {
-	GTK_THEME = "Arc-Dark";
-    	GTK_ICON_THEME = "Papirus";
-	QT_STYLE_OVERRIDE = "adwaita-dark";
-#	QT_STYLE_OVERRIDE = "Arc-Dark";
-#    XCURSOR_THEME = "Breeze";
-#    QT_QPA_PLATFORMTHEME = "qt5ct";
-#	QT_QPA_PLATFORMTHEME = "qt5ct";
-#    	QT_STYLE_OVERRIDE = "Arc-Dark";
-    	XDG_SESSION_TYPE = "wayland";
-    	MOZ_ENABLE_WAYLAND = "1";
-};
-*/
-
-
 
 
 

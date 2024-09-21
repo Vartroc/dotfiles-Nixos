@@ -1,4 +1,4 @@
-{ lib, pkgs, config, ... }:
+{ lib, pkgs, ... }:
 let 
 fetched_layout = lib.fetchurl {
    url = "https://dl.neo-layout.org/mine";
