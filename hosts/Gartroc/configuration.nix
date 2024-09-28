@@ -1,5 +1,4 @@
 { pkgs, ... }:
-
 {
 imports = [
 	./hardware-configuration.nix
@@ -23,13 +22,13 @@ imports = [
 	../../modules/home-manager/zsh.nix
 	../../modules/nixos/flexing.nix
 	../../modules/nixos/no-shutdown.nix
+#	../../modules/nixos/osu.nix
 ];
 home-manager = {
 	users = {
 		"andi" = import ./home.nix;
 	};
 };
-
 greetd.enable = true;
 greetd.command = "river";
 getty.enable = true;
@@ -97,7 +96,6 @@ environment.systemPackages = with pkgs; [
 		adwaita-qt
 		anki
 		python312Packages.pyqt6
-		texliveFull
 		youtube-music
 	];
 

@@ -15,7 +15,7 @@ config = lib.mkIf config.bash.aliases.enable {
 		hmconfigurate = "sudo nvim /etc/nixos/hosts/Gartroc/home.nix";
 		nixmodules = "sudo nvim /etc/nixos/modules/nixos/";
 		hmmodules = "sudo nvim /etc/nixos/modules/home-manager/";
-		modules = "sudo nvim /etc/nixos/moduels/";
+		modules = "sudo nvim /etc/nixos/modules/";
 	};
 };
 }

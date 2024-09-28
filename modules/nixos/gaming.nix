@@ -13,7 +13,7 @@ config = lib.mkIf config.gaming.enable {
 	environment.systemPackages = with pkgs; [
 		lutris
 		prismlauncher
-		osu-lazer
+		osu-lazer-bin
 		mangohud
 		protonup
 
