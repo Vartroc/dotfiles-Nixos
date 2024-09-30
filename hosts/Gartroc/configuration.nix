@@ -17,11 +17,12 @@ imports = [
 	../../modules/nixos/fonts.nix
 	../../modules/nixos/neovim.nix
 	../../modules/nixvim/nixvim.nix
-	../../modules/nixos/ollama.nix
+#	../../modules/nixos/ollama.nix
 	../../modules/nixos/direnv.nix
 	../../modules/home-manager/zsh.nix
 	../../modules/nixos/flexing.nix
 	../../modules/nixos/no-shutdown.nix
+	../../modules/nixos/printing.nix
 #	../../modules/nixos/osu.nix
 ];
 home-manager = {
