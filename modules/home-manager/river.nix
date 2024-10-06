@@ -1,4 +1,4 @@
-{ pkgs, lib, config, inputs, ... }:
+{ pkgs, ... }:
 let
   mod = "Super";
 in
@@ -17,6 +17,7 @@ in
 environment.systemPackages = [ 
 	pkgs.alsa-utils
 	pkgs.xdg-desktop-portal-gtk
+	pkgs.wbg
 ];
 
 
@@ -52,7 +53,7 @@ wayland.windowManager.river = {
 				"${mod} F11" = ''spawn "amixer set Master toggle"'';
 				
 				"${mod}+Shift H" = ''spawn 'notify-send "$(date +%H):$(date +%M) Uhr"' '';	
-				"${mod} W" = '' spawn 'test=$(slurp) && grim -g "$test" - | wl-copy && grim -g "$test" ~/Screenshots/"$(date)".png' '';
+				"${mod} W" = '' spawn 'test=$(slurp) && grim -g "$test" - | wl-copy && grim -g "$test" ~/pictures/screenshots/"$(date)".png' '';
 				"Super+Shift E" = "exit";
     			};
   		};
@@ -85,7 +86,7 @@ wayland.windowManager.river = {
 		done
 
 		rivertile -view-padding 3 -outer-padding 3 &
-		
+		wbg /home/andi/pictures/wallpapers/current.png 
 
 		'';
 	};
