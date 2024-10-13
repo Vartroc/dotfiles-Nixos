@@ -85,8 +85,8 @@ wayland.windowManager.river = {
     			riverctl map normal ${mod}+Shift+Control $i toggle-view-tags $tags
 		done
 
+		wbg /home/andi/pictures/wallpapers/current.png &
 		rivertile -view-padding 3 -outer-padding 3 &
-		wbg /home/andi/pictures/wallpapers/current.png 
 
 		'';
 	};

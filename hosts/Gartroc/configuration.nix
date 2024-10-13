@@ -54,7 +54,7 @@ programs = {
 
 # Missalanious
 security.polkit.enable = true;
-services.fwupd.enable = true;
+services.fwupd.enable = false;
 programs.dconf.enable = true;
 nix.settings.experimental-features = [ "nix-command" "flakes" ];
 nixpkgs.config.allowUnfree = true;
