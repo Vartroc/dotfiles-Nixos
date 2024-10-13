@@ -16,6 +16,7 @@ config = lib.mkIf config.gaming.enable {
 		osu-lazer-bin
 		mangohud
 		protonup
+		r2modman
 
 		ddnet
 		mindustry
