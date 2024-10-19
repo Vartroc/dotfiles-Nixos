@@ -24,6 +24,7 @@ imports = [
 	../../modules/nixos/no-shutdown.nix
 	../../modules/nixos/printing.nix
 #	../../modules/nixos/osu.nix
+	../../modules/nixos/kernel.nix
 ];
 home-manager = {
 	users = {
@@ -98,6 +99,7 @@ environment.systemPackages = with pkgs; [
 		anki
 		python312Packages.pyqt6
 		youtube-music
+		ntfs3g
 	];
 
 
