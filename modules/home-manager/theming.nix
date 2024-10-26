@@ -1,4 +1,4 @@
-{ lib, inputs, pkgs, config, ... }:
+{ inputs, pkgs, ... }:
 {
 environment.variables = {
       GDK_BACKEND = "wayland";
@@ -16,14 +16,12 @@ environment.variables = {
 };
 home-manager.users."andi" = {
   imports = [ inputs.catppuccin.homeManagerModules.catppuccin ];
-
   catppuccin = {
     enable = true;
-    accent = "lavender";
     flavor = "mocha";
+#    accent = "lavender";
     pointerCursor.enable = false;
   };
-
   home.pointerCursor = {
     gtk.enable = true;
     name = "Bibata-Modern-Classic";
@@ -31,11 +29,11 @@ home-manager.users."andi" = {
     package = pkgs.bibata-cursors;
   };
 
-  qt = {
+/*  qt = {
     enable = true;
     style.name = "kvantum";
     platformTheme.name = "kvantum";
-  };
+  };*/
 
   gtk = {
     enable = true;

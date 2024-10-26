@@ -1,6 +1,6 @@
 { pkgs, config, ... }:
 {
 programs.kitty = {
-	theme = "Catppuccin-Mocha";
+	themeFile = "Catppuccin-Mocha";
 };
 }
