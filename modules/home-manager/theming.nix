@@ -24,9 +24,11 @@ home-manager.users."andi" = {
   };
   home.pointerCursor = {
     gtk.enable = true;
-    name = "Bibata-Modern-Classic";
+#    name = "Bibata-Modern-Classic";
+    name = "Banana-Curser";
     size = 20;
-    package = pkgs.bibata-cursors;
+#    package = pkgs.bibata-cursors;
+    package = pkgs.banana-cursor;
   };
 
 /*  qt = {

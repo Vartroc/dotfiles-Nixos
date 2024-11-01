@@ -14,7 +14,7 @@ config = lib.mkMerge [
 	(lib.mkIf config.bootloader.grub.enable {
 		boot.loader.grub = {
 			enable = true;
-			useOSProber = true;
+			#useOSProber = true;
 			efiSupport = true;
 			efiInstallAsRemovable = true;
 		};
