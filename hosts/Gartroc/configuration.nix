@@ -88,6 +88,7 @@ environment.systemPackages = with pkgs; [
 		inkscape
 		mpv
 		obsidian
+		pandoc
 		vesktop
 
 		gimp
