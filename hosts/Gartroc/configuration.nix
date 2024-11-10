@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
 imports = [
 	./hardware-configuration.nix
@@ -69,6 +69,7 @@ environment.systemPackages = with pkgs; [
 		wf-recorder
 
 		firefox
+		inputs.zen-browser.packages."${system}".specific
 		signal-desktop
 		pavucontrol
 #		easyeffects

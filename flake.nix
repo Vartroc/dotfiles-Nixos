@@ -14,6 +14,7 @@ inputs = {
   	};
 	nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 	stylix.url = "github:danth/stylix";
+	zen-browser.url = "github:MarceColl/zen-browser-flake";
 };
 
 	
